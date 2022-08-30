@@ -64,7 +64,7 @@ body {
 .icon-pop_close::after {
     content: "";
     display: block;
-    background-image: url(http://127.0.0.1:54128/css/../../images/common/sp_icons.png);
+    background-image: url(css/../../images/common/sp_icons.png);
     background-position: 0px -946px;
     width: 24px;
     height: 24px;
@@ -426,7 +426,7 @@ body {
     .icon-pop_close::after { 
         content: "";
         display: block;
-        background-image: url(http://127.0.0.1:54128/css/../../images/common/sp_icons.png);
+        background-image: url(css/../../images/common/sp_icons.png);
         background-size: 502px 485px;
         background-position: -468px -45px;
         width: 17px;
