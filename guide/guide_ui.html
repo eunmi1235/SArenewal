@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>UI guide</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <link rel="stylesheet" href="../css/plugin/csslibrary.css">
+  <link rel="stylesheet" href="../css/pages_common_ko.css">
+  <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript" charset="utf-8"></script>
+  <![endif]-->
+  <script src="../js/plugin/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  -->
+  <script src="../js/plugin/jquerylibrary.js"></script>
+  <script src="../js/pages_common_ko.js"></script>
+  <script src="@debug_v1.0.js"></script>
+  
+  <style>
+    .guide.wrap { width: 1080px; margin:0 auto; background-color: #fff;}
+      .guide.wrap #guide_container { padding-top:0; } guide_ui
+    .guide_h1 { padding: 20px; font-size: 30px; text-align: center; color:black;}
+    .guide_h2 { position: relative; background-color: #333; color: aliceblue; padding:7px 10px; height:40px; cursor: pointer; font-size: 20px; font-weight: bold; }
+    .guide_h2:hover:after { content: "scrolltop"; margin-left: 30px; font-size:13px; color: crimson; vertical-align: middle;}
+    .guide_h3 { position: relative; background-color: #aaa; padding: 3px 20px; font-size: 16px; font-weight: bold;  color: aliceblue;}
+    .api_link, .api_link:link { position: absolute; right:10px;color:#fab309; font-weight: bold; text-decoration: underline;}
+    .guide .item-inner { position: relative; margin-bottom: 20px; }
+    .guide .item-inner iframe #trp-debug{ display: none; }
+    .guide .item-inner samp {  }
+    .guide .item-inner .codelabel-btn{ position: absolute; top: 0; right: 0; width: 75px; height: 25px; opacity: 0.70; background-color: #000; font-size: 13px; color:#aaa;  z-index: 1; }
+    .guide .item-inner .codelabel-btn.show { opacity: 0; }
+    .guide .item-inner pre { display:none; position: relative; margin-top: 15px; min-height: 25px; border:1px solid #ccc; background-color: #fafafa; }    
+    .guide .item-inner code { display: block; }
+    .guide .item-inner code.html::before{ content: "[ HTML ]"; display: inline-block; padding: 2px 5px; position: absolute; top:0; right: 0;
+        font-family: Malgun Gothic; font-size: 15px; font-weight: bold; color:#fff; background-color: #ff8c88; border-radius: 0 0 5px 5px;  }
+    .guide .item-inner code.css::before{ content: "[ CSS ]"; display: inline-block; padding: 2px 5px; position: absolute; top:0; right: 0;
+        font-family: Malgun Gothic; font-size: 15px; font-weight: bold; color:#fff; background-color: #85d8d8; border-radius: 0 0 5px 5px;  }
+    .guide .item-inner code.js::before{ content: "[ JS ]"; display: inline-block; padding: 2px 5px; position: absolute; top:0; right: 0;
+        font-family: Malgun Gothic; font-size: 15px; font-weight: bold; color:#fff; background-color: #fab309; border-radius: 0 0 5px 5px;  }
+    .guide .item-inner code { font-family: verdana; font-size: 12px;  max-height: 300px; overflow-y: auto;  }
+    .guide .tab_guide-list { overflow: hidden; list-style-type:none; }
+    .guide .tab_guide-list li { float: left;  }
+    .guide .tab_guide-list li a { display: block; margin: 10px;padding: 7px 15px;font-weight: bold;color: #fff;background-color: #11a0d8;border: 0;border-radius: 5px;}
+    .guide #guide_footer { background-color: #333333; width: 100%;  min-width:1080px;}
+    .guide #guide_footer .footer-inner { position: relative; width: 1080px;  margin: 0 auto;  padding: 20px 30px; color:#ccc;  font-size: 11px; }
+    
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-light.min.css">
+  <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.1.min.js" ></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  
+</head>
+<body>
+<div class="wrapper">
+  <div id="contents" class="guide wrap contents">
+    <!-- header -->
+    <div id="guide_header">
+      <h1 class="guide_h1">UI guide</h1>
+      <ul class="tab_guide-list">
+        <li><a href="#from">from</a></li>
+        <li><a href="#from_expansion">from(expansion)</a></li>
+        <li><a href="#button">버튼</a></li>
+        <li><a href="#paging">페이징</a></li>
+        
+        <li><a href="#tabmenu">텝메뉴</a></li>
+        <!-- <li><a href="#accordion">아코디언메뉴</a></li>  -->
+        
+        <li><a href="#layer_popup">레이어팝업</a></li>
+        <li><a href="#scrollbar">스크롤바</a></li>
+        <li><a href="#gallery">gallery</a></li>
+      </ul>
+    </div>
+    <!-- //header -->
+<!-- 
+<div class="article" id="from">
+	<h2 class="guide_h2">form</h2>
+	<h3 class="guide_h3">- input:text </h3>
+	<div class="item-inner">
+		
+		<samp class="sample" data-sample="code">
+			__code__
+		</samp>
+			
+<pre data-sample="code"><code class="html">	
+	__code__
+</code></pre>
+
+	</div>
+</div>
+-->
+    
+    <!-- container -->
+    <div id="guide_container">
+      <div class="guide_contents">
+
+
+                <div class="article" id="from">
+                  <h2 class="guide_h2">form</h2>
+                  <h3 class="guide_h3">- input:text </h3>
+                  <div class="item-inner">
+
+<samp class="sample  js-source"  data-sample="code">
+  <input type="text" placeholder="활성화 48=>43" id="">
+
+  <input type="text" placeholder="비활성화" disabled id="">
+
+  <div class="input-box">
+    <input type="text" placeholder="오류 class:input_error" class="input_error" id="">
+    <span class="error_msg">영문숫자 특수문자 2가지이상 8~15가지 조합으로 입력해주세요</span>
+  </div>
+
+  <span class="input_del">
+    <input class="" type="text" placeholder="" value="input 삭제">
+    <button><i class="form-input_x"></i></button>
+  </span>
+  
+
+  <input type="text" placeholder="h42 => 43" id="" class="h42">
+
+  <div class="search-box">
+    <input type="search" placeholder="h42 => 43" id="" class="h42">
+    <i class="form-search_md"></i>
+  </div>
+
+  <div class="input-group">
+    <input type="text" id="name-1" class="form-control" value="" placeholder="">
+    <button class="btn btn_light_gray_line" type="button"><span>중복확인</span></button>
+  </div>
+
+  <div class="search-group">
+    <input type="text" id="name-1" class="form-control" value="" placeholder="높이 48">
+    <button class="btn btn_black" type="button"><span>검색</span></button>
+  </div>
+
+  <div class="search-group sm">
+    <input type="text" id="name-1" class="form-control" value="" placeholder="높이 42 -> popup">
+    <button class="btn btn_black" type="button"><span>검색</span></button>
+  </div>
+  
+
+  <div class="input-byte">
+    <input type="text" id="name-2" class="form-control" value="" placeholder="">
+    <div class="byte_check">
+      <em>100</em> <span>/ 100자</span>
+    </div>
+ </div>
+
+</samp>
+                  </div>
+
+
+
+<!-- 
+                  <h3 class="guide_h3">- textarea </h3>
+                  <div class="item-inner">
+  <samp class="sample  js-source"  data-sample="code">
+    <div class="textarea-box">
+      <textarea name="" id="" cols="30" rows="10" >요청 사항을 입력해 주세요</textarea>
+    </div>
+  
+    <div class="textarea-box byte">
+      <textarea name="" id="" cols="30" rows="10">요청 사항을 입력해 주세요</textarea>
+      <div class="byte_check">
+        <em>0</em><span> / 200byte</span>
+      </div>
+    </div>
+  </samp>
+                    </div> -->
+  
+  
+                  </div>                  
+
+
+
+                    <h3 class="guide_h3">- radio(.trp.radio-box)</h3>
+                    <div class="item-inner">
+
+<samp class="sample  js-source" data-sample="code">
+  <span class="trp radio-box">
+    <input type="radio" id="trp-radio1" name="radioSet1" checked>
+    <i></i>
+    <label for="trp-radio1">radio1 <br> radios</label>
+  </span>
+  <span class="trp radio-box">
+    <input id="radio1-2" type="radio" name="radioSet1">
+    <i></i>
+    <label for="radio1-2">radio2</label>
+  </span>
+  <span class="trp radio-box">
+    <input id="radio1-3" type="radio" name="radioSet1">
+    <i></i>
+    <label for="radio1-3">radio3</label>
+  </span> <br>
+
+  <span class="trp radio-box">
+    <input id="radio2-1" type="radio" name="radioSet2">
+    <i></i>
+    <label for="radio2-1">radioSet2</label>
+  </span>
+  <span class="trp radio-box">
+    <input id="radio2-2" type="radio" name="radioSet2">
+    <i></i>
+    <label for="radio2-2">radioSet2</label>
+  </span>
+  <span class="trp radio-box">
+    <input id="radio2-3" type="radio" name="radioSet2">
+    <i></i>
+    <label for="radio2-3">radioSet2</label>
+  </span>
+</samp>
+
+                    </div>
+
+
+
+                    <h3 class="guide_h3">- checkbox(.trp.checkbox-box)</h3>
+                    <div class="item-inner">
+
+<samp class="sample js-source"  data-sample="code">
+  <span class="trp checkbox-box">
+      <input id="checkbox1" type="checkbox" name="">
+      <i></i>
+      <label for="checkbox1">checkbox1</label>
+  </span>
+  <span class="trp checkbox-box">
+      <input id="checkbox2" type="checkbox" name="">
+      <i></i>
+      <label for="checkbox2">checkbox2</label>
+  </span>
+  <span class="trp checkbox-box">
+      <input id="checkbox3" type="checkbox" name="">
+      <i></i>
+      <label for="checkbox3">checkbox3</label>
+  </span>
+</samp>
+
+
+                    </div>
+
+<!-- 
+
+                    <h3 class="guide_h3">- 전체 선택 checkbox(.trp.checkboxall-box)</h3>
+                    <div class="item-inner">
+
+<samp class="sample js-source" data-sample="code">
+  <div class="check_all-wrap js_all-1">
+      <span class="trp checkbox-box">
+          <input id="checkbox_all" class="js_all" type="checkbox" name="">
+          <i></i>
+          <label for="checkbox_all">전체</label>
+      </span>
+      <span class="trp checkbox-box">
+          <input id="checkbox_all1" class="js_item" type="checkbox" name="">
+          <i></i>
+          <label for="checkbox_all1">checkbox1</label>
+      </span>
+      <span class="trp checkbox-box">
+          <input id="checkbox_all2" class="js_item" type="checkbox" name="">
+          <i></i>
+          <label for="checkbox_all2">checkbox2</label>
+      </span>
+      <span class="trp checkbox-box">
+          <input id="checkbox_all3" class="js_item" type="checkbox" name="">
+          <i></i>
+          <label for="checkbox_all3">checkbox3</label>
+      </span>
+  </div>
+  <script>
+    $(".js_all-1").trpCheckBoxAllsImg(".js_all", ".js_item");
+  </script>
+</samp>
+   -->
+                    </div>
+
+
+                    <h3 class="guide_h3">- 라디오박스, 체크박스 비활성화 (opacity0.5) (이미지 교체시 선택,비선택 비활성화 이미지 필요)</h3>
+                    <div class="item-inner">
+
+<samp class="sample js-source"  data-sample="code">
+  <span class="trp radio-box">
+      <input id="radio-disabled" type="radio" disabled name="">
+      <i></i>
+      <label for="radio-disabled">radio_disabled</label>
+  </span>
+  <span class="trp checkbox-box">
+      <input id="checkbox-disabled" type="checkbox" disabled name="">
+      <i></i>
+      <label for="checkbox-disabled">checkbox_disabled</label>
+  </span>
+</samp>
+
+                    </div>
+
+
+
+                    <h3 class="guide_h3">- 파일첨부</h3>
+                    <div class="item-inner">
+
+<samp class="sample js-source"  data-sample="code">
+  <div class="trp file-box">
+    <label for="fileName" class="screen-reader-text">파일첨부</label>
+    <input type="text" id="fileName" class="trp-Filetext">
+    <input type="button" class="btn btn_sm btn_gray" value="파일첨부">
+    <input type="file" class="trp-Filehidden" onchange="javascript: document.getElementById('fileName').value = this.value" title="Insert Attachment">
+  </div>
+</samp>
+                    </div>
+
+
+                    <h3 class="guide_h3">- select (사용안함 X)</h3>
+                    <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <div class="select-box"> 
+    <select class=""  id="">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <i class="icon-select_arrow"></i>
+  </div>
+  <div class="select-box h56-point_line"> 
+    <select class=""  id="">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <i class="icon-select_arrow"></i>
+  </div>
+  <div class="select-box h42-line"> 
+    <select class=""  id="">
+      <option value="1">h42 => 43 </option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <i class="form-select_arrow_md"></i>
+  </div>
+</samp>
+                    </div>
+
+
+
+
+                </div>
+                
+
+                <div class="article" id="from_expansion">
+                    <h2 class="guide_h2">from(expansion)</h2>
+
+                    <h3 class="guide_h3">- select(.select2Basic) | 삭제: $(".select2Basic").select2('destroy') | <a class="api_link" href="https://select2.org/getting-started/basic-usage" target="_blank">Plugin API</a></h3>
+                    <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <div class="select-box"> 
+    <select class="select2Basic"  id="">
+      <option value="1">48 => 43</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+  <div class="select-box"> 
+    <select class="select2Basic42"  id="">
+      <option value="1">42 => 43</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+
+  <div class="select-box"> 
+    <select class="select2Basic56_line"  id="">
+      <option value="1">56 => 54</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
+  
+  <script>
+  $(function(){
+      
+    $(".select2Basic").select2({            
+      minimumResultsForSearch: Infinity,
+    });
+
+    $(".select2Basic42").select2({            
+      minimumResultsForSearch: Infinity,
+    });
+
+    $(".select2Basic56_line").select2({            
+      minimumResultsForSearch: Infinity,
+    });
+
+  });
+  </script>
+</samp>
+                    </div>
+
+
+                                        
+                    <h3 class="guide_h3">- datepicker(.datepicker-box .js-datepicker)
+                      <a class="api_link" href="https://jqueryui.com/datepicker/" target="_blank">Plugin API</a>
+                    </h3>
+                    <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <span class="datepicker-box">
+    <input type="text" class="js-datepicker" placeholder="yy-mm-dd">
+    <i></i>
+  </span>
+
+  <script>
+    $( ".js-datepicker" ).datepicker();
+  </script>
+</samp>
+                    </div>
+
+
+                      
+<!--                     <h3 class="guide_h3">- 수량 변경(.ui-countTxt)</h3>
+                    <div class="item-inner">
+<samp class="sample js-source" data-sample="code">
+  <span class="ui-count">
+    <input type="text" class="ui-countTxt" value="1" min="1" max="5">
+  </span>
+  <script>
+    $('.ui-count').uiCount();
+  </script>
+</samp>
+                  </div> -->
+
+
+<!--                     <h3 class="guide_h3">- datetimepicker(.datepicker-box .js-datepicker)</h3>
+                    <div class="item-inner">
+<samp class="sample js-source "   data-sample="code">
+  <div class="timepicker-area js-timepicker1">
+    <span class="timepicker-box">
+      <input type="text" class="" readonly>
+      <i></i>
+    </span>
+  </div>
+  <div class="timepicker-area js-timepicker2">
+    <span class="timepicker-box">
+      <input type="text" class="" readonly>
+      <i></i>
+    </span>
+  </div>
+
+  <script>
+    $('.js-timepicker1').trpTimepicker();  
+    $('.js-timepicker2').trpTimepicker();  
+  </script>
+
+</samp>
+                    </div>
+ -->
+
+
+ <!-- 
+                    <h3 class="guide_h3">- starpoint(.starpoint-box)</h3>
+                    <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <div class="starpoint-box js-starpoint">
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+    <span class="star"></span>
+  </div>
+
+  <script>
+    $(".js-starpoint .star").on("click", function(){
+      $(".js-starpoint .star").removeClass("on");
+      $(this).addClass("on").prevAll().addClass("on");
+    })
+  </script>
+</samp>
+                    </div>
+
+
+                    <h3 class="guide_h3">- starpoint2 .5(.starpoint2-box)</h3>
+                    <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <div class="starpoint2-box js-starpoint2">
+    <span class="star"></span><span class="star"></span>
+    <span class="star"></span><span class="star"></span>
+    <span class="star"></span><span class="star"></span>
+    <span class="star"></span><span class="star"></span>
+    <span class="star"></span><span class="star"></span>
+  </div>
+
+  <script>
+    $(".js-starpoint2 .star").on("click", function(){
+      $(".js-starpoint2 .star").removeClass("on");
+      $(this).addClass("on").prevAll().addClass("on");
+    })
+  </script>
+</samp>
+                    </div>
+
+                    
+                    
+                    <h3 class="guide_h3">- tooltip(.icon_tooltip.js-tooltip)
+                      <a class="api_link" href="https://jqueryui.com/tooltip/" target="_blank">Plugin API</a>
+                    </h3>
+                    <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <i class="icon_tooltip js-tooltip" title="짧은 툴팁"></i>
+
+  <div class="tar">
+      <i class="icon_tooltip js-tooltip_sendstate" data-geo=".js_tooltip_sendstate" ></i>
+      <div class="js_tooltip_sendstate" style="display: none">
+          장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 장문 툴팁 
+      </div>       
+  </div>
+</samp>
+                    </div>
+ -->
+                                        
+                    
+                    <h3 class="guide_h3">- 검색</h3>
+                    <div class="item-inner">
+
+<samp class="sample js-source">
+  <!--검색필드//-->
+  <div class="search-area">
+    <div class="search-box">
+      <div class="input_del">
+        <input class="" type="text" placeholder="검색어를 입력하세요." value="이우환">
+        <button class="btn_del"><i class="form-search-del_lg"></i></button>
+      </div>
+      <button class="btn_search"><i class="form-search_lg"></i></button>
+    </div>
+    <div class="suggestion-box">
+      <div class="word">
+        <span>추천 검색어</span>
+      </div>
+      <div class="word-items">
+        <button>이우환</button><button>김완기</button>
+        <button>김창열</button><button>쿠사마</button>
+        <button>호크니</button><button>박서보</button>
+      </div>
+    </div>
+  </div>
+  <!--//검색필드-->
+</samp>
+                    </div>
+
+
+                   
+                </div>
+
+
+                <div class="article" id="button">
+                    <h2 class="guide_h2"> button 샘플</h2>
+                    <h3 class="guide_h3">- BUTTON size [H56=>53, H48=>43, H42=>32] ( btn [btn_lg , 기본44H, btn_sm ]  )</h3>
+                    <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  
+  <a class="btn btn_default btn_lg" href="#" role="button"><i class="icon-select_arrow"></i><span>a 버튼 H56</span></a>
+  <button class="btn btn_default btn_lg" type="button"><span>Button 버튼 H56 => H53</span></button>
+  <input  class="btn btn_default btn_lg" type="button" value="Input 버튼 H56">
+  <input  class="btn btn_default btn_lg" type="submit" value="Submit 버튼 H56">
+    
+  <br><br>
+    
+  <a class="btn btn_default " href="#" role="button"><span>a 버튼 H48</span><i class="icon-select_arrow"></i></a>
+  <button class="btn btn_default " type="button"><span>Button 버튼 H48 => H43</span></button>
+  <input  class="btn btn_default " type="button" value="Input 버튼 H48">
+  <input  class="btn btn_default " type="submit" value="Submit 버튼 H48">
+    
+  <br><br>
+    
+  <a class="btn btn_default btn_sm" href="#" role="button"><span>a 버튼 H42</span></a>
+  <button class="btn btn_default btn_sm" type="button"><span>Button 버튼 H42 > H32</span></button>
+  <input  class="btn btn_default btn_sm" type="button" value="Input 버튼 H42">
+  <input  class="btn btn_default btn_sm" type="submit" value="Submit 버튼 H42">
+  <br><br>
+    
+<!--   <a class="btn btn_default btn_xs" href="#" role="button"><span>a 버튼 H31</span></a>
+  <button class="btn btn_default btn_xs" type="button"><span>Button 버튼 H31 > H23</span></button>
+  <input  class="btn btn_default btn_xs" type="button" value="Input 버튼 H31">
+  <input  class="btn btn_default btn_xs" type="submit" value="Submit 버튼 H31"> -->
+
+</samp>
+                      
+                    </div>
+
+
+                    <h3 class="guide_h3">- BUTTON color  ( btn [btn_default , btn_gray , btn_black, btn_dark ]  )</h3>
+                    <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+    
+     
+    <a      class="btn btn_point" href="#" role="button"><span>a 버튼 btn_point</span></a>
+    <button class="btn btn_point" type="button"><span>Button 버튼 btn_point</span></button>
+    <input  class="btn btn_point" type="button" value="Input 버튼 btn_point">
+    <input  class="btn btn_point" type="submit" value="Submit 버튼 btn_point">
+    
+    <br><br>
+
+    <a      class="btn btn_black" href="#" role="button"><span>a 버튼 btn_black</span></a>
+    <button class="btn btn_black" type="button"><span>Button 버튼 btn_black</span></button>
+    <input  class="btn btn_black" type="button" value="Input 버튼 btn_black">
+    <input  class="btn btn_black" type="submit" value="Submit 버튼 btn_black">
+        
+    <br><br>
+
+    <a      class="btn btn_default" href="#" role="button"><span>a버튼 btn_default</span></a>
+    <button class="btn btn_default" type="button"><span>Button 버튼 btn_default</span></button>
+    <input  class="btn btn_default" type="button" value="Input 버튼 btn_default">
+    <input  class="btn btn_default" type="submit" value="Submit 버튼 btn_default">
+    
+    <br><br>
+
+    <a      class="btn btn_point_line" href="#" role="button"><span>a 버튼 btn_point_line</span></a>
+    <button class="btn btn_point_line" type="button"><span>Button 버튼 btn_point_line</span></button>
+    <input  class="btn btn_point_line" type="button" value="Input 버튼 btn_point_line">
+    <input  class="btn btn_point_line" type="submit" value="Submit 버튼 btn_point_line">
+    
+    <br><br>
+
+    <a      class="btn btn_white" href="#" role="button"><span>a 버튼 btn_white</span></a>
+    <button class="btn btn_white" type="button"><span>Button 버튼 btn_white</span></button>
+    <input  class="btn btn_white" type="button" value="Input 버튼 btn_white">
+    <input  class="btn btn_white" type="submit" value="Submit 버튼 btn_white">
+    
+    <br><br>
+    <a      class="btn btn_gray_line" href="#" role="button"><span>a 버튼 btn_gray_line</span></a>
+    <button class="btn btn_gray_line" type="button"><span>Button 버튼 btn_gray_line</span></button>
+    <input  class="btn btn_gray_line" type="button" value="Input 버튼 btn_gray_line">
+    <input  class="btn btn_gray_line" type="submit" value="Submit 버튼 btn_gray_line">
+    
+    <br><br>
+    
+    <a      class="btn btn_gray" href="#" role="button"><span>a 버튼 btn_gray</span></a>
+    <button class="btn btn_gray" type="button"><span>Button 버튼 btn_gray</span></button>
+    <input  class="btn btn_gray" type="button" value="Input 버튼 btn_gray">
+    <input  class="btn btn_gray" type="submit" value="Submit 버튼 btn_gray">
+    
+    <br><br>
+    
+    <a      class="btn btn_light_gray_line" href="#" role="button"><span>a 버튼 btn_light_gray_line</span></a>
+    <button class="btn btn_light_gray_line" type="button"><span>Button 버튼 btn_light_gray_line</span></button>
+    <input  class="btn btn_light_gray_line" type="button" value="Input 버튼 btn_light_gray_line">
+    <input  class="btn btn_light_gray_line" type="submit" value="Submit 버튼 btn_light_gray_line">
+    
+</samp>
+    
+                    </div>
+    <!-- 
+
+                    <h3 class="guide_h3">버튼 정렬 (.btn_set+().tac,tar,tal), .btn_set-single, .btn_set-double, .btn_set-triple )</h3>
+                    <div class="item-inner">
+                  
+<samp class="sample js-source"  data-sample="code">
+  
+  <div class="btn_set-float tac">
+    <div class="fl">
+      <button class="btn btn_default btn_sm" type="button"><span>목록</span></button>
+      <button class="btn btn_gray btn_sm" type="button"><span>삭제</span></button>
+      <button class="btn btn_black btn_sm" type="button"><span>등록</span></button>
+    </div>
+    <a class="btn btn_default btn_sm" href="#" role="button"><span>Link 버튼</span></a>
+    <a class="btn btn_default btn_sm" href="#" role="button"><span>Link 버튼</span></a>
+    <a class="btn btn_default btn_sm" href="#" role="button"><span>Link 버튼</span></a>
+    <div class="fr">
+      <button class="btn btn_default btn_sm" type="button"><span>목록</span></button>
+      <button class="btn btn_gray btn_sm" type="button"><span>삭제</span></button>
+      <button class="btn btn_black btn_sm" type="button"><span>등록</span></button>
+    </div>
+  </div>
+
+  <div class="btn_set">
+    <div class="btn_item"><a class="btn btn_default btn_sm" href="#" role="button"><span>Link 버튼</span></a> </div>
+  </div>
+
+  <div class="btn_set">
+    <div class="btn_item"><a class="btn btn_default btn_sm" href="#" role="button"><span>Link 버튼</span></a></div>
+    <div class="btn_item"><a class="btn btn_default btn_sm" href="#" role="button"><span>Link 버튼</span></a></div>
+  </div>
+
+  <div class="btn_set">
+    <div class="btn_item"><a class="btn btn_default btn_sm" href="#" role="button"><span>Link 버튼</span></a></div>
+    <div class="btn_item"><a class="btn btn_default btn_sm" href="#" role="button"><span>Link 버튼</span></a></div>
+    <div class="btn_item"><a class="btn btn_default btn_sm" href="#" role="button"><span>Link 버튼</span></a></div>
+  </div>
+</samp>
+                    </div>
+                </div>
+                     -->
+                </div>
+
+
+
+                <div class="article" id="paging">
+                    <h2 class="guide_h2">페이징</h2>
+                    <h3 class="guide_h3">Basic</h2>
+                    <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <div class="paging-area">
+    <div class="paging">
+      <a href="#" class="prev_end icon-page_prevprev">FIRST</a><a href="#" class="prev icon-page_prev">PREV</a>
+      <strong class="on">1</strong>
+      <a href="#"><em>2</em></a>
+      <a href="#"><em>3</em></a>
+      <a href="#"><em>4</em></a>
+      <a href="#"><em>5</em></a>
+      <a href="#"><em>6</em></a>
+      <a href="#"><em>7</em></a>
+      <a href="#"><em>8</em></a>
+      <a href="#"><em>9</em></a>
+      <a href="#"><em>100</em></a>
+      <a href="#" class="next icon-page_next "><em>NEXT</em></a><a href="#" class="next_end icon-page_nextnext">END</a>
+    </div>
+  </div>
+</samp>
+                          
+                    </div>
+
+                </div>
+
+                    
+
+                <div class="article" id="tabmenu">
+                  <h2 class="guide_h2">tabmenu</h2>
+                  <h3 class="guide_h3">- tabmenu (type-left : 62)- 페이지이동 </h3>
+                  <div class="item-inner">
+                    
+<samp class="sample js-source"  data-sample="code">
+  <div class="tab-area type-left">
+    <ul class="tab-list js-list_tab">
+      <li class="active"><a href="#tab-cont-1"><span>전체</span></a></li>
+      <li class=""><a href="#tab-cont-2"><span>근현대</span></a></li>
+      <li class=""><a href="#tab-cont-3"><span>고미술</span></a></li>
+      <li class=""><a href="#tab-cont-4"><span>시계</span></a></li>
+      <li class=""><a href="#tab-cont-5"><span>럭셔리</span></a></li>
+    </ul>
+  </div>
+
+  <script> 
+   $('.js-list_tab a').on('click', function(e) {
+      e.preventDefault();
+      var tar = $(this).position().left;
+      var scrollX = tar - ($(".js-list_tab").parents(".tab-area").width() / 2) + $(this).width() / 2;
+
+      if ($(this).parents('li').hasClass('active')) {
+          return false;
+      } else {
+        $(".js-list_tab li").removeClass('active');
+        $(this).parents('li').addClass('active');
+
+        $(".js-list_tab").parents(".tab-area").scrollLeft(scrollX);
+      }
+    });
+  </script>
+</samp>
+
+                  </div>
+
+
+            
+                    <h3 class="guide_h3">- tabmenu (type-left_mm : h:62 font-24 )- 페이지이동 </h3>
+                    <div class="item-inner">
+                      
+  <samp class="sample js-source"  data-sample="code">
+    <div class="tab-area type-left_mm">
+      <ul class="tab-list js-left_mm">
+        <li class="active"><a href="#tab-cont-1"><span>전체</span></a></li>
+        <li class=""><a href="#tab-cont-2"><span>라이브</span></a></li>
+        <li class=""><a href="#tab-cont-3"><span>온라인</span></a></li>
+        <li class=""><a href="#tab-cont-4"><span>홍콩</span></a></li>
+        <li class=""><a href="#tab-cont-5"><span>기타</span></a></li>
+      </ul>
+    </div>
+  
+    <script> 
+     $('.js-left_mm a').on('click', function(e) {
+        e.preventDefault();
+        var tar = $(this).position().left;
+        var scrollX = tar - ($(".js-left_mm").parents(".tab-area").width() / 2) + $(this).width() / 2;
+  
+        if ($(this).parents('li').hasClass('active')) {
+            return false;
+        } else {
+            $(".js-left_mm li").removeClass('active');
+            $(this).parents('li').addClass('active');
+  
+            $(".js-left_mm").parents(".tab-area").scrollLeft(scrollX);
+        }
+      });
+    </script>
+  </samp>
+  
+                    </div>
+      
+
+
+
+
+  <h3 class="guide_h3">- tabmenu (type-left_mm_3 : h:62->50  font-24->14  x-scroll )- 페이지이동 </h3>
+  <div class="item-inner">
+    <samp class="sample js-source"  data-sample="code">
+      <div class="tab-area type-left_mm_3">
+        <ul class="tab-list js-left_mm_3">
+          <li class="active"><a href="#tab-cont-1"><span>전체</span></a></li>
+          <li class=""><a href="#tab-cont-2"><span>근현대</span></a></li>
+          <li class=""><a href="#tab-cont-3"><span>고미술</span></a></li>
+          <li class=""><a href="#tab-cont-4"><span>시계</span></a></li>
+          <li class=""><a href="#tab-cont-2"><span>근현대</span></a></li>
+          <li class=""><a href="#tab-cont-3"><span>고미술</span></a></li>
+          <li class=""><a href="#tab-cont-4"><span>시계</span></a></li>
+          <li class=""><a href="#tab-cont-2"><span>근현대</span></a></li>
+          <li class=""><a href="#tab-cont-3"><span>고미술</span></a></li>
+          <li class=""><a href="#tab-cont-4"><span>시계</span></a></li>
+        </ul>
+      </div>
+    
+      <script> 
+        $('.js-left_mm_3 a').on('click', function(e) {
+        e.preventDefault();
+        var tar = $(this).position().left;
+        var scrollX = tar - ($(".js-left_mm_3").parents(".tab-area").width() / 2) + $(this).width() / 2;
+  
+        if ($(this).parents('li').hasClass('active')) {
+            return false;
+        } else {
+            $(".js-left_mm_3 li").removeClass('active');
+            $(this).parents('li').addClass('active');
+  
+            $(".js-left_mm_3").parents(".tab-area").scrollLeft(scrollX);
+        }
+      });
+      </script>
+    </samp>
+  </div>
+                    
+         
+                 
+
+         
+                  <h3 class="guide_h3">- tabmenu (type-left_lg : 74) -페이지이동 </h3>
+                  <div class="item-inner">
+                    
+<samp class="sample js-source"  data-sample="code">
+  <div class="tab-area type-left_lg">
+    <ul class="tab-list js-list_tab_left_lg">
+      <li class="active"><a href="#tab-cont-1"><span>이사 아트 스토리지</span></a></li>
+      <li class=""><a href="#tab-cont-2"><span>장흥 아트 스토리지</span></a></li>
+      <li class=""><a href="#tab-cont-3"><span>평창 아트 스토리지</span></a></li>
+    </ul>
+  </div>
+
+  <script> 
+   $('.js-list_tab_left_lg a').on('click', function(e) {
+      e.preventDefault();
+      var tar = $(this).position().left;
+      var scrollX = tar - ($(".js-list_tab_left_lg").parents(".tab-area").width() / 2) + $(this).width() / 2;
+
+      if ($(this).parents('li').hasClass('active')) {
+          return false;
+      } else {
+          $(".js-list_tab_left_lg li").removeClass('active');
+          $(this).parents('li').addClass('active');
+
+          $(".js-list_tab_left_lg").parents(".tab-area").scrollLeft(scrollX);
+      }
+    });
+  </script>
+</samp>
+
+                  </div>
+               
+
+
+
+
+
+                <h3 class="guide_h3">- tabmenu (center) -show,hide </h3>
+                <div class="item-inner">
+		
+<samp class="sample js-source"  data-sample="code">
+  <div class="tab-area type-center_m2">
+    <ul class="tab-list js-tab_center_list">
+      <li class="active"><a href="#tab_cont-1"><span>서울옥션 강남센터 <br class="only-mb"> Exhibition I</span></a></li>
+      <li><a href="#tab_cont-2"><span>서울옥션 강남센터 <br class="only-mb" /> Exhibition II</span></a></li>
+    </ul>
+  </div>
+
+  <div class="js-tab_con"> 
+    <div class="tab_cont active" id="tab_cont-1">텝1</div>
+    <div class="tab_cont" id="tab_cont-2">텝2</div>
+  </div>
+
+  <script>
+    $('.js-tab_center_list a').on('click', function(e) {
+        e.preventDefault();
+        var tar = $(this).position().left;
+        var scrollX = tar - ($(".js-tab_center_list").parents(".tab-area").width() / 2) + $(this).width() / 2;
+
+        if ($(this).parents('li').hasClass('active')) return false;
+        var id = $(this).attr('href');
+        if ($(id).length > 0) {
+          $('.js-tab_con .tab_cont').removeClass('active');
+          $(id).addClass('active');
+          $(this).parents('li').siblings('li').removeClass('active').end().addClass('active');
+
+          $(".js-tab_center_list").parents(".tab-area").scrollLeft(scrollX);
+        }
+        return false;
+    });
+  </script>
+</samp>
+                </div>
+
+
+                <h3 class="guide_h3">- tabmenu (type-sorting :  h:56 font-18) </h3>
+                <div class="item-inner">
+                  
+<samp class="sample js-source"  data-sample="code">
+  <div class="tab-area type-sorting">
+    <ul class="tab-list js-list_tab">
+       <li class="active"><a href="#none"><span>회원정보</span></a></li>
+       <li class=""><a href="#none"><span>라이브경매</span></a></li>
+       <li class=""><a href="#none"><span>온라인경매</span></a></li>
+       <li class=""><a href="#none"><span>위탁</span></a></li>
+       <li class=""><a href="#none"><span>결제/배송</span></a></li>
+       <li class=""><a href="#none"><span>기타</span></a></li>
+    </ul>
+ </div>
+
+<script> 
+    $('.js-list_tab a').on('click', function($e) {
+        $e.preventDefault();
+        var tar = $(this).position().left;
+        var scrollX = tar - ($(".js-list_tab").parents(".tab-area").width() / 2) + $(this).width() / 2;
+
+        if ($(this).parents('li').hasClass('active')) {
+              return false;
+        } else {
+          $(".js-list_tab li").removeClass('active');
+          $(this).parents('li').addClass('active');
+
+          $(".js-list_tab").parents(".tab-area").scrollLeft(scrollX);
+        }
+    });
+</script>
+</samp>
+
+                </div>
+
+
+
+
+             <!--    
+
+                <h3 class="guide_h3">- tabmenu (type-left_md :  h:62 font-20) -텝이동 </h3>
+                <div class="item-inner">
+                  
+<samp class="sample js-source"  data-sample="code">
+<div class="tab-area type-left_md">
+  <ul class="tab-list js-left_md">
+    <li class="active"><a href="#tab-cont_md-1"><span>이사 아트 스토리지</span></a></li>
+    <li class=""><a href="#tab-cont_md-2"><span>장흥 아트 스토리지</span></a></li>
+    <li class=""><a href="#tab-cont_md-3"><span>평창 아트 스토리지</span></a></li>
+  </ul>
+</div>
+<div class="js-tab_con_md"> 
+  <div class="tab_cont active" id="tab-cont_md-1">텝1</div>
+  <div class="tab_cont" id="tab-cont_md-2">텝2</div>
+  <div class="tab_cont" id="tab-cont_md-3">텝3</div>
+</div>
+
+<script> 
+    $('.js-left_md a').on('click', function(e) {
+      e.preventDefault();
+      var tar = $(this).position().left;
+      var scrollX = tar - ($(".js-left_md").parents(".tab-area").width() / 2) + $(this).width() / 2;
+
+      if ($(this).parents('li').hasClass('active')) return false;
+      var id = $(this).attr('href');
+      if ($(id).length > 0) {
+        $('.js-tab_con_md .tab_cont').removeClass('active');
+        $(id).addClass('active');
+        $(this).parents('li').siblings('li').removeClass('active').end().addClass('active');
+
+        $(".js-left_md").parents(".tab-area").scrollLeft(scrollX);
+      }
+      return false;
+  });
+</script>
+</samp>
+
+                </div>
+
+ -->
+
+
+
+
+
+
+              </div>
+
+				<!-- 
+                <div class="article" id="accordion">
+                  <h2 class="guide_h2">accordion menu</h2>
+                  <h3 class="guide_h3">- accordion-list </h3>
+                  <div class="item-inner">
+<samp class="sample js-source"  data-sample="code">
+  <ul class="accordion-list js-accordion_menu">
+    <li class="trp_acitem">
+      <div class="header-area">
+        <a href="#" class="acc_btn" >
+          <span class="accordion_name">accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1accordion1</span>
+          <i class="icon-accordion_arrow_down"></i>
+        </a>
+      </div>
+      <div class="con-area" >
+        accordion1-con
+      </div>
+    </li>
+    <li class="trp_acitem">
+      <div class="header-area">
+        <a href="#" class="acc_btn" >
+          <span class="accordion_name">accordion2</span>
+          <i class="icon-accordion_arrow_down"></i>
+        </a>
+      </div>
+      <div class="con-area" >
+        accordion2-con
+      </div>
+    </li>
+    <li class="trp_acitem">
+      <div class="header-area">
+        <a href="#" class="acc_btn" >
+          <span class="accordion_name">accordion3</span>
+          <i class="icon-accordion_arrow_down"></i>
+        </a>
+      </div>
+      <div class="con-area" >
+        accordion3-con
+      </div>
+    </li>
+  </ul>
+
+  <script>
+    $(".js-accordion_menu").trpAccordionMenu(".acc_btn" ,".con-area" , "on");
+  </script>
+</samp>
+                  </div>
+                </div>
+ -->
+                
+                <div class="article" id="layer_popup">
+                  <h2 class="guide_h2">레이어 팝업</h2>
+                  <h3 class="guide_h3">- 기본 레이어 팝업  [ 팝업은 (.trp.popupfixed-wrap)  body ＞ .wrapper 과 같은 레벨에 있어야 함. ] </h3>
+                  <div class="item-inner">
+<samp class="sample js-source" data-sample="code">
+  <a href="#popup_default_alert-wrap1" class="btn btn_default js-default_alert"><span>레이어팝업</span></a>
+
+  <div id="popup_default_alert-wrap1" class="trp popupfixed-wrap default-popup">
+    <div class="popup-dim"></div>
+    <div class="popup-align mode-md">
+      <div class="popup-vertical">
+        <div class="popup-layer">
+
+          <div class="pop-panel">
+            <div class="pop-header">
+              <a class="btn_close icon-pop_close js-closepop" href="#" title="닫기">X</a>
+              <div class="title-box">
+                <span class="txt_title">낙찰 수수료</span>
+              </div>
+            </div>
+            <div class="pop-body">
+              <section class="section" style="display: block;">
+								<article class="articles-box">
+									<table class="table_base data-table name-bid_commission">
+										<thead>
+											<tr>
+												<th>낙찰가 (원)</th>
+												<th>수수료율 (VAT 포함)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+														<span>~ 10,000,000</span>
+												</td>
+												<td>
+														<span>낙찰가의 19.8%</span>
+												</td>
+											</tr>
+											<tr>
+												<td>
+														<span>10,000,001 ~</span>
+												</td>
+												<td>
+														<span>1,000만원 X 19.8% + (낙찰가 - 1,000만원) X 16.5%</span>
+												</td>
+											</tr>
+											<tr>
+												<td>
+														<span>그외 국내지역</span>
+												</td>
+												<td>
+														<span>15만원</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</article>
+								<article class="articles-typo">
+									<p class="text-help">
+										예시) 낙찰가 5,000만원일 경
+									</p>
+									<ul class="mark_dot-list">
+										<li class="text-help">낙찰 수수료 : 198만원 + (5,000만원 - 1,000만원)*16.5%=8,580</li>
+										<li class="text-help">총 구매대금 : 낙찰가 + 낙찰수수료 = 58,580,000원</li>
+									</ul>
+								</article>
+              </section>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="popup_default_alert-wrap2" class="trp popupfixed-wrap bidding-online-popup">
+    <div class="popup-dim"></div>
+    <div class="popup-align mode-lg">
+      <div class="popup-vertical">
+        <div class="popup-layer">
+
+          <div class="pop-panel">
+            <div class="pop-header">
+              <a class="btn_close icon-pop_close js-closepop" href="#" title="닫기">X</a>
+              <div class="title-box">
+                <span class="txt_title">LOT 92</span>
+              </div>
+            </div>
+            <div class="pop-body scroll-type">
+              <section class="section  " style="display: block;">
+                <div class="bidding-online-wrap">
+                  <article class="bidding-online-left">
+
+                    <figure class="view-area">
+                      <div class="view-img">
+                        <div class="img-box">
+                          <div class="box-inner">
+                            <img src="/images/temp/lot-02.jpg" alt="LOT 02" >
+                          </div>
+                        </div>
+                      </div>
+                      <figcaption class="view-typo">
+                        <div class="typo-header">
+                          <div class="title"><span>데미안허스트</span><em>(1965)</em></div>
+                          <div class="desc"><span>Air (From The Series The Elements)</span></div>
+                        </div>
+                        <div class="typo-body">
+                          <span>spray paint on canvas</span>
+                          <ul>
+                            <li>80.9 X73.4cm</li>
+                            <li>2021</li>
+                          </ul>
+                        </div>
+                      </figcaption>
+                    </figure>
+
+                  </article>
+                  <article class="bidding-online-right js-bidding_tab">
+                    <div class="side_time">
+                      <span>남은시간 200:35:58</span>
+                    </div>
+                    <div class="product-list-area ">
+                      <div class="list-header">
+                        <div class="price-name"><span>현재가</span></div>
+                        <div class="price-amount"><em>KPW 1,700,000</em> <span>(응찰11)</span></div>
+                      </div>
+                      <div class="list-body scroll-type">
+                        <ul class="product-list">
+                          <li>
+                            <div class="product-user on_green"><span>dj****</span></div>
+                            <div class="product-price"><span>1,600,000</span></div>
+                            <div class="product-day"><span>2033-03-16</span><span>14:20:21</span></div>
+                          </li>
+                          <li>
+                            <div class="product-user"><span>dj****</span></div>
+                            <div class="product-price on_red"><span>1,600,000</span></div>
+                            <div class="product-day"><span>2033-03-16</span><span>14:20:21</span></div>
+                          </li>
+                          <li>
+                            <div class="product-user"><span>dj****</span></div>
+                            <div class="product-price"><span>1,600,000</span></div>
+                            <div class="product-day"><span>2033-03-16</span><span>14:20:21</span></div>
+                          </li>
+                          <li>
+                            <div class="product-user"><span>dj****</span></div>
+                            <div class="product-price"><span>1,600,000</span></div>
+                            <div class="product-day"><span>2033-03-16</span><span>14:20:21</span></div>
+                          </li>
+                          <li>
+                            <div class="product-user"><span>dj****</span></div>
+                            <div class="product-price"><span>1,600,000</span></div>
+                            <div class="product-day"><span>2033-03-16</span><span>14:20:21</span></div>
+                          </li>
+                          <li>
+                            <div class="product-user"><span>dj****</span></div>
+                            <div class="product-price"><span>1,600,000</span></div>
+                            <div class="product-day"><span>2033-03-16</span><span>14:20:21</span></div>
+                          </li>
+                        
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="topbtn-area">
+                      <div class="btn_set">
+                        <div class="btn_item"><a class="btn btn_default btn_lg" href="#" role="button"><span>1회 응찰</span></a></div>
+                        <div class="btn_item"><a class="btn btn_gray btn_lg" href="#" role="button"><span>자동응찰</span></a></div>
+                      </div>
+                    </div>
+                    <div class="caution-area">
+                      <ul class="mark_char-list">
+                        <li class="accent"><span>응찰하기 버튼을 누르시면 취소가 불가능합니다.</span></li>
+                        <li class=""><span>동시 응찰자 경우 서버시각 기준 우선순위가 부여됩니다.</span></li>
+                      </ul>
+                    </div>
+                    <div class="bottombtn-area">
+                      <div class="btn_set active">
+                        <div class="btn_item"><a class="btn btn_point btn_lg typo-pc_mb-line" href="#" role="button"><span>KPW 1,800,000</span> <span>응찰하기</span></a></div>
+                      </div>
+                      <div class="btn_set type-pc_mb-column">
+                        <div class="btn_item">
+                          <div class="select-box h56-point_line"> 
+                            <select class="tac" id="">
+                              <option value="1">KPW 1,800,000</option>
+                              <option value="2">KPW 1,900,000</option>
+                              <option value="3">KPW 2,000,000</option>
+                              <option value="4">KPW 2,100,000</option>
+                              <option value="5">KPW 2,200,000</option>
+                            </select>
+                            <i class="icon-select_arrow"></i>
+                          </div>
+                        </div>
+                        <div class="btn_item"><a class="btn btn_point btn_lg" href="#" role="button"><span>응찰하기</span></a></div>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </section>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </div
+  </div>
+
+
+  
+  <script>
+    (function(){    
+      /* 팝업 내용을 body에 심기 */
+      $(".trp.popupfixed-wrap").appendTo("body");
+
+      var popup_default_alert = $(".js-default_alert").trpLayerFixedPopup( "#popup_default_alert-wrap1" );
+      var popup_default_alert2 = $(".js-default_alert").trpLayerFixedPopup( "#popup_default_alert-wrap2" );
+  
+      $(popup_default_alert.getBtn).on("click", function($e){
+        $e.preventDefault();
+        popup_default_alert.open(this);     // or false   
+        popup_default_alert2.open(this);    // or false   
+      });
+  
+      $("body").on("click", "#popup_default_alert-wrap1 .js-closepop, #popup_default_alert-wrap1 .popup-dim", function($e){
+          $e.preventDefault(); 
+          popup_default_alert.close();
+      });
+      $("body").on("click", "#popup_default_alert-wrap2 .js-closepop, #popup_default_alert-wrap2 .popup-dim", function($e){
+          $e.preventDefault(); 
+          popup_default_alert2.close(
+              function(){ alert(" #popup_default_alert-wrap2 닫기") }
+          );
+      });
+    
+    })();
+  </script>
+</samp>
+                    </div>
+                </div> 
+                   
+                <!--    
+                <div class="article" id="scrollbar">
+                  <h2 class="guide_h2">스크롤바</h2>
+                  <h3 class="guide_h3">- mCustomScrollbar 3.1.13 [스크롤 컨테이너에 (.mCustomScrollbar)클래스 추가 ]    <a href="./guide_mCustomScrollbar.html" target="_blank">(link)</a>
+                     <a class="api_link" href="http://manos.malihu.gr/jquery-custom-content-scroller/" target="_blank">Plugin API</a>
+                  </h3>
+                  <div class="item-inner">
+                        
+<pre data-sample="code"><button class="codelabel-btn">js 코드</button><code class="js" style="display: none;">	
+  $('.mCustomScrollbar').mCustomScrollbar("destroy"); // 스크롤 지우기
+  $('.mCustomScrollbar').mCustomScrollbar();          // 스크롤 생성
+
+  $('.mCustomScrollbar_x').mCustomScrollbar({autoHideScrollbar: true, axis:'x',advanced:{autoExpandHorizontalScroll:true}});   // 가로 스크롤
+</code></pre>
+         
+                      <div><iframe src="guide_mCustomScrollbar.html" frameborder="0" width="100%" height="500" scrolling="no" border="no" maginwidth="0" marginheight="0" frameborder="0"
+                        ></iframe></div>
+                    </div>
+                </div>
+              -->
+              <div class="article" id="scrollbar">
+                <h2 class="guide_h2">스크롤바</h2>
+                <h3 class="guide_h3">- 스킨 </h3>
+                <div class="item-inner">
+                      
+                  <samp class="sample js-source"  data-sample="code">
+                    <div class="scroll-type" style="height: 100px;">
+                      ... <br />... <br />... <br />... <br />... <br />... <br />... <br />
+                      ... <br />... <br />... <br />... <br />... <br />... <br />... <br />...
+                      ... <br />... <br />... <br />... <br />... <br />... <br />... <br />... <br />
+                    </div>
+                  </samp>
+
+                  </div>
+              </div>
+
+
+                <div class="article" id="gallery">
+                    <h2 class="guide_h2">Gallery</h2>
+<!-- 
+                    <h3 class="guide_h3">- bxslider 4.12 
+                      <a href="guide_bxslider.html" target="_blank">(link)</a>
+                      <a class="api_link" href="https://bxslider.com/" target="_blank">Plugin API</a>
+                    </h3>
+                    <div class="item-inner">
+                      <iframe src="guide_bxslider.html" frameborder="0" width="100%" height="350" scrolling="no" border="no" maginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+<pre data-sample="code"><button class="codelabel-btn">html 코드</button><code class="html" style="display: none;">	
+  <div class="gallery_view" style="">
+    <div class="gallery_center">
+      <div class="bxslider-wrapper">
+        <div class=""><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class=""><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class=""><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class=""><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class=""><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class=""><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class=""><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class=""><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+      </div>
+      <a href="#" class="prev">Prev</a>
+      <a href="#" class="next">Next</a>
+    </div>
+    <div class="pagination"></div>
+  </div>
+</code></pre>                      
+
+<pre data-sample="code"><button class="codelabel-btn">js 코드</button><code class="js" style="display: none;">	
+  // bxslider 세팅
+  var _bxslider =  $('.bxslider-wrapper').bxSlider({            
+    speed : 500,
+    autoDelay : 3000, 
+    controls:false,                    		 // 좌우버튼
+    pagerSelector : $(".pagination"),      // 페이지 컨테이너
+    onSlideAfter: function($slideElement, oldIndex, newIndex){		// 움직임이 끝나면 실행
+      $(".pagination li").removeClass("current");
+      $(".pagination li").eq(newIndex).addClass("current");
+    }
+  })
+
+    // 좌우버튼
+  $('.prev').on('click', function(e){
+    e.preventDefault();
+    _bxslider.goToPrevSlide();
+  })
+  $('.next').on('click', function(e){
+    e.preventDefault();
+    _bxslider.goToNextSlide();
+  })
+
+  // 컨텐츠에 마우스 올리면 일시정지
+  $(".gallery_center").hover(function(){
+    _bxslider.stopAuto();
+  } ,
+  function(){
+    _bxslider.startAuto();
+  })
+</code></pre>
+
+<pre data-sample="code"><button class="codelabel-btn">css 코드</button><code class="css" style="display: none;">	
+  .gallery_view { width: 500px; margin: 0 auto;}
+  .gallery_view .gallery_center {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .gallery_view .pagination { text-align: center; }
+  .gallery_view .pagination .bx-pager {  text-align: center; font-size: 0; line-height: 0; }
+  .gallery_view .pagination .bx-pager .bx-pager-item { display: inline-block; 	font-size: 0; line-height: 0; }
+  .gallery_view .pagination .bx-pager .bx-pager-item a { margin:5px 2px;  overflow: hidden;
+    width: 8px;height: 8px;display: inline-block;border-radius: 100%;background: #000;opacity: .2;
+    font-size: 0; line-height: 0; text-indent: 100px;
+  }
+  .gallery_view .pagination .bx-pager .bx-pager-item a.active {
+    opacity: 1;
+    background: #007aff;
+  }
+</code></pre>
+
+               
+                    </div>
+ -->
+
+
+                    <h3 class="guide_h3">- swiper 4.5.0 
+                      <a href="guide_swiper-4.5.0.html" target="_blank">(swiper4.5.0  link)</a>
+
+                      <a class="api_link" href="https://github.com/nolimits4web/Swiper/blob/Swiper4/API.md" target="_blank">API v4</a>
+                    </h3>
+                    <div class="item-inner">
+                        <div><iframe src="guide_swiper-4.5.0.html" frameborder="0" width="100%" height="350" scrolling="no" border="no" maginwidth="0" marginheight="0" frameborder="0"
+                         ></iframe></div>
+                    </div>
+                    <div class="item-inner">
+<pre data-sample="code"><button class="codelabel-btn">html 소스</button><code class="html" style="display: none;">	
+  <div class="gallery_view" style="">
+    <div class="gallery_center">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+        <div class="swiper-slide"><img src="https://via.placeholder.com/500x300" width="500" height="300"  alt="" /></div>
+      </div>
+      <a href="#" class="prev">Prev</a>
+      <a href="#" class="next">Next</a>
+    </div>
+    <div class="pagination"></div>
+  </div>
+</code></pre>
+
+<pre data-sample="code"><button class="codelabel-btn">js 소스</button><code class="js" style="display: none;">	
+  // Swiper 세팅
+  var mySwiper = new Swiper('.gallery_center',{
+    autoplay : 3000,
+    loop: true,
+    pagination: '.pagination',
+    paginationClickable: true,
+
+    onSlideChangeEnd: function(swiper){										// 움직임이 끝나면 실행
+      $(".pagination li").removeClass("current");
+      $(".pagination li").eq(swiper.activeLoopIndex).addClass("current");
+    }
+  })
+
+  // 좌우버튼
+  $('.prev').on('click', function(e){
+    e.preventDefault();
+    mySwiper.slidePrev();
+  })
+  $('.next').on('click', function(e){
+    e.preventDefault();
+    mySwiper.slideNext();
+  })
+
+  // 컨텐츠에 마우스 올리면 일시정지
+  $(".gallery_center").hover(function(){
+    mySwiper.stopAutoplay();
+  },
+  function(){
+    mySwiper.startAutoplay();
+  })
+</code></pre>
+
+<pre data-sample="code"><button class="codelabel-btn">css 소스</button><code class="css" style="display: none;"">	
+  .gallery_view { width: 500px; margin: 0 auto;}
+  .gallery_view .gallery_center {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+  }
+  .gallery_view .pagination { text-align: center; font-size: 0; line-height: 0;}
+  .gallery_view .pagination .swiper-pagination-bullet { margin:5px 2px; overflow: hidden;
+    width: 8px;height: 8px;display: inline-block;border-radius: 100%;background: #000;opacity: .2;
+    font-size: 0; line-height: 0; text-indent: 100px;
+  }
+  .gallery_view .pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #007aff;
+  }
+</code></pre>
+                    </div>
+
+                      
+                        <!--                          
+                        <div id="swiperr"></div>
+                        <script>
+                            function load_home() {
+                            document.getElementById("swiperr").innerHTML='<object type="text/html" data="guide_swiper.html" ></object>';}
+                        </script> -->
+                </div>
+
+                <div class="article" id="scroll_top">
+                  <h2 class="guide_h2">scroll_top</h2>
+                </div>
+              
+            </div>
+      </div>
+        
+      <!-- footer
+      <div id="guide_footer">
+          <div class="footer-inner">
+              COPYRIGHT TurfRainPackage GUIDE SYSTEM ALL RIGHTS RESERVED.
+          </div>
+      </div> -->
+      <!-- //footer -->
+
+<!-- stykey -->
+      <%- include('../include/_sticky_ko.ejs') %>
+<!-- // stykey -->
+    </div>
+    <!-- //container -->
+
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+<script>
+  $(".guide_h2").on("click", function (e) {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 100);
+    return false;
+  })
+</script>
+</body>
+</html>

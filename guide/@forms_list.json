@@ -1,0 +1,5 @@
+{
+  "forms_list" : ["form-bidding_select_arrow","form-bidding_select_arrow@2x","form-calender","form-checkbox-dim","form-checkbox-off","form-checkbox-off@2x","form-checkbox-on","form-checkbox-on@2x","form-checkbox_w-off","form-checkbox_w-off@2x","form-dot_tooltip-top","form-dot_tooltip","form-input_x","form-input_x@2x","form-radio-dim","form-radio-off","form-radio-off@2x","form-radio-on","form-radio-on@2x","form-search-del_lg","form-search-del_lg@2x","form-search_lg","form-search_lg@2x","form-search_md","form-search_md@2x","form-select_arrow_md","form-select_arrow_md@2x","form-select_arrow_view@2x","form-star-off","form-star-on","form-time","form-tooltip"],
+  "forms_width" : ["20","30","23","20","20","34","20","34","20","34","13","13","20","32","20","20","34","20","34","50","60","50","60","30","60","30","60","40","20","20","23","21"],
+  "forms_height" : ["20","30","23","20","20","34","20","34","20","34","15","15","20","32","20","20","34","20","34","50","60","50","60","30","60","30","60","40","20","20","23","21"]
+}

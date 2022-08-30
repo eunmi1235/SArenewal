@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- header -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>service | Seoul Auction</title>
+    <link rel="stylesheet" href="/css/plugin/csslibrary.css">
+    <link rel="stylesheet" href="/css/common.css" type="text/css" />
+    <link rel="stylesheet" href="/css/pages_common_en.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <!-- //header -->
+</head>
+
+<body class="">
+    <div class="wrapper">
+        <div class="sub-wrap pageclass">
+
+            <!-- header -->
+            <header class="header main-header header-border">
+                <!-- class="main-header fixed" -->
+                <div class="header_beltbox on">
+                    <!--class="on" block-->
+                    <div class="wrap belttxtbox wrap_padding">
+                        <span class="header_beltTit">
+                            <a href="#">
+                                <span class="text-over belt_tit">
+                                    Notice of increase in purchase Notice of increase
+                                </span>
+                                <!--<span class="beltbanner-triangle"></span>-->
+                            </a>
+                        </span>
+                        <span class="beltclose-btn closebtn closebtn-w"></span>
+                    </div>
+                </div>
+                <div>
+                    <ul class="header_utilitymenu wrap_padding pc-ver">
+                        <li class="utility-tab utility-lang"><a href="javascript:void(0);">KOR</a>
+                            <ul class="bubble-box bubble-box01">
+                                <li><a href="/index.html">KOR(한국어)</a></li>
+                                <li><a href="/">ENG(English)</a></li>
+                            </ul>
+                        </li>
+                        <li class="utility-join"><a href="#">JOIN</a></li> <!-- !login -->
+                        <li class="utility-tab utility-account"><a href="javascript:void(0);">ACCOUNT</a>
+                            <ul class="bubble-box bubble-box02">
+                                <li><a href="/index_en.html">Live Auction</a></li>
+                                <li><a href="#">Online Auction<i class="utility-icon on"></i></a></li>
+                                <li><a href="#">Favaorites</a></li>
+                                <li><a href="#">Profile</a></li>
+                            </ul>
+                        </li> <!-- login -->
+                        <li class="utility-login"><a href="#">LOGIN</a></li> <!-- !login -->
+                        <li class="utility-logout"><a href="#">LOGOUT</a></li> <!-- login -->
+                    </ul>
+                </div>
+
+                <nav class="header_navbox">
+                    <div class="header_nav wrap_padding">
+                        <a href="/" class="header_logo"><span class="blind-text">logo</span></a>
+                        <ul class="header_gnbmenu pc-ver">
+                            <li><a href="#" class="">AUCTION</a></li>
+                            <li><a href="#">PRIVATE SALE</a></li>
+                            <li><a href="#">SELL</a></li>
+                            <li><a href="#">SERVICE</a></li>
+                        </ul>
+                        <section class="topsearch-box">
+                            <button class="m-top-search m-ver"></button>
+                            <button class="m-gnbmenu m-ver"></button>
+                            <form action="" class="scroll_none">
+                                <fieldset class="topsearch topsearch-en">
+                                    <span class="submenuBg-closeBtn closebtn-b top-search-closeBtn m-ver"></span>
+                                    <input onkeydown="searchFilter()" type="text" class="topsearch-text pc-ver"><button type="submit" class="topsearch-btn pc-ver"></button>
+                                    <section class="search-bubble-box">
+                                        <div class="recent-search">
+                                            <span class="keyword-search-tit">Recent Keyword<span class="keyword-all-del">All Delete</span></span>
+                                            <!-- 
+															--><span class="recent-keyword"><a href="#">Kim SunWoo</a><span class="keyword-del"></span></span>
+                                            <!-- 
+															--><span class="recent-keyword"><a href="#">Yayoi Kusama</a><span class="keyword-del"></span></span>
+                                            <!--
+															--><span class="recent-keyword"><a href="#">Lee UFan</a><span class="keyword-del"></span></span>
+                                            <!--
+															--><span class="recent-keyword"><a href="#">Kim WhanKi</a><span class="keyword-del"></span></span>
+                                            <!--
+															--><span class="recent-keyword"><a href="#">Park SooKeun </a><span class="keyword-del"></span></span>
+                                            <!--
+															-->
+                                        </div>
+                                        <div class="recommend-search-part">
+                                            <span class="keyword-search-tit">Recommend Keyword</span>
+                                            <!--   
+															--><a href="#" class="recommend-keyword">Lee Bae</a>
+                                            <!--
+															--><a href="#" class="recommend-keyword">Min JoungKi</a>
+                                            <!--
+															--><a href="#" class="recommend-keyword">Chungshin</a>
+                                            <!--
+															--><a href="#" class="recommend-keyword">Park SeoBo</a>
+                                            <!--
+															--><a href="#" class="recommend-keyword">Lim HanSoo</a>
+                                            <!--
+															--><a href="#" class="recommend-keyword">David Hockney</a>
+                                            <!---->
+                                        </div>
+                                    </section>
+                                </fieldset>
+                            </form>
+                        </section>
+                    </div>
+
+                    <section class="gnb_submenuBg scroll_none">
+                        <section class="submenuBg scroll_none">
+                            <div class="wrap">
+                                <span class="submenuBg-closeBtn closebtn closebtn-b m-ver"></span>
+                                <div class="flex_wrap submenuBg-box">
+                                    <div class="Ingbanner-box">
+                                        <a href="#" class="Ingbanner" target="_blank">
+                                            <figure class="border-txt-darkg Ingbanner-img">
+                                                <img src="/images/pc/thumbnail/gnb_thubnatil_01.jpg" alt="ing_auction01">
+                                            </figure>
+                                            <div class="Ingbanner-txt text-over">
+                                                <span class="auctionKind-box Ingkind-auction on">LIVE</span>
+                                                <p class="text-over">February Live Auction</p>
+                                                <span class="Ingbanner-arrow"></span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="Ingbanner" target="_blank">
+                                            <figure class="border-txt-darkg Ingbanner-img">
+                                                <img src="/images/pc/thumbnail/gnb_thubnatil_02.jpg" alt="ing_auction02">
+                                            </figure>
+                                            <div class="Ingbanner-txt text-over">
+                                                <span class="auctionKind-box Ingkind-auction">ONLINE</span>
+                                                <p class="text-over">e BID Public Online Auction</p>
+                                                <span class="Ingbanner-arrow"></span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="Ingbanner" target="_blank">
+                                            <figure class="border-txt-darkg Ingbanner-img">
+                                                <img src="/images/pc/thumbnail/gnb_thubnatil_ready.jpg" alt="ing_auction03">
+                                            </figure>
+                                            <div class="Ingbanner-txt text-over">
+                                                <span class="auctionKind-box Ingkind-auction">ONLINE</span>
+                                                <p class="text-over">ZEROBASE</p>
+                                                <span class="Ingbanner-arrow"></span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="Ingbanner" target="_blank">
+                                            <figure class="border-txt-darkg Ingbanner-img">
+                                                <img src="/images/pc/thumbnail/gnb_thubnatil_01.jpg" alt="ing_auction01">
+                                            </figure>
+                                            <div class="Ingbanner-txt text-over">
+                                                <span class="auctionKind-box Ingkind-auction on">LIVE</span>
+                                                <p class="text-over">February Live Auction</p>
+                                                <span class="Ingbanner-arrow"></span>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="Ingbanner" target="_blank">
+                                            <figure class="border-txt-darkg Ingbanner-img">
+                                                <img src="/images/pc/thumbnail/gnb_thubnatil_02.jpg" alt="ing_auction02">
+                                            </figure>
+                                            <div class="Ingbanner-txt text-over">
+                                                <span class="auctionKind-box Ingkind-auction">ONLINE</span>
+                                                <p class="text-over">e BID Public Online Auction</p>
+                                                <span class="Ingbanner-arrow"></span>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <ul class="subGnbmenu">
+                                        <li class="subGnbmenu-tit"><span class="gnbmenu_arrow">AUCTION<span></span></span>
+                                            <ul class="submenu submenu-part01">
+                                                <li><a href="#">Current</a><span class="currentIng">NOW</span></li>
+                                                <li><a href="#">Upcoming</a><span class="currentIng">NOW</span></li>
+                                                <li><a href="#">Result</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="subGnbmenu-tit"><span class="gnbmenu_arrow">PRIVATE SALE<span></span></span>
+                                            <ul class="submenu submenu-part02">
+                                                <li><a href="#">Exhibition</a><span class="currentIng">NOW</span></li>
+                                                <li><a href="#">Private Sale</a></li>
+                                                <li><a href="#">Private Sale Guide</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="subGnbmenu-tit"><span class="gnbmenu_arrow">SELL<span></span></span>
+                                            <ul class="submenu submenu-part03">
+                                                <li><a href="#">Consignment information</a></li>
+                                                <li><a href="#">Consignment application</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="subGnbmenu-tit"><span class="gnbmenu_arrow">SERVICE<span></span></span>
+                                            <ul class="submenu submenu-part04">
+                                                <li><a href="#">Academy</a><span class="currentIng">NOW</span></li>
+                                                <li><a href="#">Art Collateral Loans</a></li>
+                                                <li><a href="#">Art Storage</a></li>
+                                                <li><a href="#">Rental of Space</a></li>
+                                                <li><a href="#">Art Consulting & <br>Corporate Marketing</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="subGnbmenu-tit m-ver">
+                                            <span class="gnbmenu_arrow modebox">Light Mode
+                                                <label for="dark" class="mode-toggle">
+                                                    <input type="checkbox" id="dark" name="dark">
+                                                    <span class="mode-switch"></span>
+                                                </label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <figure class="blacklotbox">
+                                        <a href="https://www.blacklot.com/" target="_blank">
+                                            <img src="/images/pc/thumbnail/gnb_blacklot.jpg" alt="blacklot">
+                                        </a>
+                                    </figure>
+                                </div>
+                                <ul class="mobile-utility m-ver">
+                                    <li><a href="/index.html">KOR</a></li>
+                                    <li><a href="#" class="gnb_join">JOIN</a><a href="#" class="gnb_member">ACCOUNT</a></li>
+                                    <li><a href="#" class="gnb_login">LOGIN</a><span class="gnb_logout">LOGOUT</span></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </nav>
+            </header>
+
+            <!-- //header -->
+
+            <!-- container -->
+            <div id="container">
+                <div id="contents" class="contents">
+
+                    <!-- page title -->
+
+                    <section class="page_title-section type-dark">
+                        <div class="section-inner full_size ">
+                            <div class="center-box">
+                                <h2 class="page_title"><span class="th1">Art Storage</span></h2>
+                                <div class="page_desc"><span class="tb1"></span></div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="basis-section tab-menu-section ">
+                        <div class="section-inner">
+
+                            <div class="tab-wrap">
+                                <div class="tab-area type-left_lg">
+                                    <ul class="tab-list js-maintab_list">
+                                        <li class="active"><a href="#tab-cont-1"><span>Insa Art Storage</span></a></li>
+                                        <li><a href="#tab-cont-2"><span>Jangheung Art Storage</span></a></li>
+                                        <li><a href="#tab-cont-3"><span>Pyeongchang Art Storage</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- 미술품보관 -->
+                    <section class="basis-section last-section tab-cont-section">
+                        <div class="section-inner">
+                            <div class="content-panel type_panel-storage">
+                                <div class="panel-body">
+                                    <div class="tab-cont active" id="tab-cont-1">
+                                        <article class="storage-area">
+                                            <div class="article-header">
+                                                <div class="title"><span class="tt2">Insa Art Storage</span></div>
+                                            </div>
+                                            <div class="article-body">
+                                                <div class="storage-intro">
+                                                    <p class="tb1"> Store artworks and/or other valuables in the heart of Seoul in a specialized storage facility operated by Seoul Auction. Insa Art Storage is located in Insa-dong, a district full of galleries and art supply stores that is easily reached via public transportation.</p>
+                                                    <p class="tb1"> Insa Art Storage has units of varying sizes (between 2.8 and 8.3 square meters, accessible separately with individual keys), allowing the storage of a wide range of objects. There is also a private cabinet section where valuables can be kept safely while remaining conveniently accessible.</p>
+                                                </div>
+
+                                                <div class="storage-image">
+                                                    <img src="/images/pc/service/storage_insa_eng.png" alt="인사 아트 스토리지">
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="storage-area">
+                                            <div class="article-header">
+                                                <div class="title"><span class="tt2">Art Storage System</span></div>
+                                            </div>
+                                            <div class="article-body">
+                                                <div class="storage-system">
+                                                    <div class="item-area">
+                                                        <div class="item-header">
+                                                            <div class="img-box">
+                                                                <img src="/images/pc/service/storage_system_temp.png" alt="항온 항습 시스템">
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-body">
+                                                            <div class="title"><span class="tt4">HVAC system</span></div>
+                                                            <div class="desc tb1">
+                                                                <p>24-hour maintenance of optimum temperature and humidity levels per artwork</p>
+                                                            </div>
+                                                            <ul class="info tb1">
+                                                                <li><i class="icon-system_arrow"></i>Temperature: 18 to 22 degrees Celsius / Humidity: 45 to 55%</li>
+                                                                <li><i class="icon-system_arrow"></i>Maintained year-round (figures can be adjusted if necessary)</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-area">
+                                                        <div class="item-header">
+                                                            <div class="img-box">
+                                                                <img src="/images/pc/service/storage_system_prevention.png" alt="방재 시스템">
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-body">
+                                                            <div class="title"><span class="tt4">Emergency ventilation system</span></div>
+                                                            <!-- [0516]줄바꿈수정 -->
+                                                            <div class="desc tb1">
+                                                                <p>Extinguishing of fires (with halon gas) without damaging artworks</p>
+                                                            </div>
+                                                            <!-- // [0516]줄바꿈수정 -->
+                                                            <ul class="info tb1">
+                                                                <li><i class="icon-system_arrow"></i>Centralized fire alarm system</li>
+                                                                <li><i class="icon-system_arrow"></i>Automatically-activated heat/smoke detectors</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-area">
+                                                        <div class="item-header">
+                                                            <div class="img-box">
+                                                                <img src="/images/pc/service/storage_system_security.png" alt="보안 시스템">
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-body ">
+                                                            <div class="title"><span class="tt4">Security system</span></div>
+                                                            <div class="desc tb1">
+                                                                <p>Cutting-edge security system operated on 24-hour basis in partnership with Secom, Korea’s top security service provider</p>
+                                                            </div>
+                                                            <ul class="info tb1">
+                                                                <li><i class="icon-system_arrow"></i>CCTV surveillance (recorded on 24-hour basis)</li>
+                                                                <li><i class="icon-system_arrow"></i>Strict control/management of all who enter or exit</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="storage-area">
+                                            <div class="article-header">
+                                                <div class="title"><span class="tt2">Location</span></div>
+                                            </div>
+                                            <div class="article-body">
+                                                <div class="storage-navigation">
+                                                    <div class="map-area">
+                                                        <img class="only-pc" src="/images/pc/service/storage_map.png" alt="location sample">
+                                                        <img class="only-mb" src="/images/mobile/service/storage_map.png" alt="location sample">
+                                                    </div>
+                                                    <div class="navigation-area">
+                                                        <div class="item-area">
+                                                            <div class="item-header">
+                                                                <div class="title">
+                                                                    <i class="icon-navi_address"></i>
+                                                                    <span class="tt3">Insa Art Storage</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-body">
+                                                                <div class="navi-info tb1">
+                                                                    <!-- [0812]텍스트변경 -->
+                                                                    <div class="key">Land-lot number</div>
+                                                                    <!-- //[0812]텍스트변경 -->
+                                                                    <div class="value">
+                                                                        <p>188, Gwanhun-dong, Jongno-gu, Seoul</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="navi-info tb1">
+                                                                    <!-- [0812]텍스트변경 -->
+                                                                    <div class="key">Road name</div>
+                                                                    <!-- //[0812]텍스트변경 -->
+                                                                    <div class="value">
+                                                                        <p>41-1, Insadong-gil, Jongno-gu, Seoul</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-area">
+                                                            <div class="item-header">
+                                                                <div class="title">
+                                                                    <i class="icon-navi_bus"></i>
+                                                                    <span class="tt3">Bus</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-body">
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key">Jogyesa Temple</div>
+                                                                    <div class="value">
+                                                                        <p>Jongno 02, 1005-1, 5000, 5005, 5500, 5500-1, 5500-2, 7900, 9000, 9401</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key">Insa-dong, Aventree Hotel</div>
+                                                                    <div class="value">
+                                                                        <p>6005</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key">Anguk-dong</div>
+                                                                    <div class="value">
+                                                                        <p>162, 606, 1020</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key">Anguk Station, Jongno Police Station, Insa-dong</div>
+                                                                    <div class="value">
+                                                                        <p>109, 151, 162, 171, 172, 272</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-area">
+                                                            <div class="item-header">
+                                                                <div class="title">
+                                                                    <i class="icon-navi_subway"></i>
+                                                                    <span class="tt3">Subway</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-body">
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key subway-line"><span class="subway-color line-3">Line <i>3</i></span></div>
+                                                                    <div class="value">
+                                                                        <p>Anguk Station (Exit 6), Jongno 3-ga Station (Exit 5)</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key subway-line"><span class="subway-color line-1">Line <i>1</i></span></div>
+                                                                    <div class="value">
+                                                                        <p>Jonggak Station (Exit 3-1)</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key subway-line"><span class="subway-color line-5">Line <i>5</i></span></div>
+                                                                    <div class="value">
+                                                                        <p>Jongno 3-ga Station (Exit 5)</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="tab-cont " id="tab-cont-2">
+                                        <article class="storage-area">
+                                            <div class="article-header">
+                                                <div class="title"><span class="tt2">Jangheung Art Storage</span></div>
+                                            </div>
+                                            <div class="article-body">
+                                                <div class="storage-intro">
+                                                    <p class="tb1">Located 30 minutes from downtown Yangju, Seoul Auction’s Jangheung Art Storage is fully equipped with sophisticated convenience facilities, including a large parking lot and a gondola for transporting artworks.</p>
+                                                    <p class="tb1">Jangheung Art Storage offers units of varying sizes (34 to 67 square meters) and specializes in the safe storage of large artworks and bulk items.</p>
+                                                </div>
+                                                <div class="storage-image">
+                                                    <img src="/images/pc/service/storage_jangheung.png" alt="장흥 아트 스토리지">
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="storage-area">
+                                            <div class="article-header">
+                                                <div class="title"><span class="tt2">Art Storage System</span></div>
+                                            </div>
+                                            <div class="article-body">
+                                                <!-- [0812]텍스트변경 -->
+                                                <div class="storage-system">
+                                                    <div class="item-area">
+                                                        <div class="item-header">
+                                                            <div class="img-box">
+                                                                <img src="/images/pc/service/storage_system_temp.png" alt="항온 항습 시스템">
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-body">
+                                                            <div class="title"><span class="tt4">HVAC system</span></div>
+                                                            <div class="desc tb1">
+                                                                <p>24-hour maintenance of optimum temperature and humidity levels per artwork</p>
+                                                            </div>
+                                                            <ul class="info tb1">
+                                                                <li><i class="icon-system_arrow"></i>Temperature: 18 to 22 degrees Celsius / Humidity: 45 to 55%</li>
+                                                                <li><i class="icon-system_arrow"></i>Maintained year-round (figures can be adjusted if necessary)</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-area">
+                                                        <div class="item-header">
+                                                            <div class="img-box">
+                                                                <img src="/images/pc/service/storage_system_prevention.png" alt="방재 시스템">
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-body">
+                                                            <div class="title"><span class="tt4">Emergency ventilation system</span></div>
+                                                            <!-- [0516]줄바꿈수정 -->
+                                                            <div class="desc tb1">
+                                                                <p>Extinguishing of fires (with halon gas) without damaging artworks</p>
+                                                            </div>
+                                                            <!-- // [0516]줄바꿈수정 -->
+                                                            <ul class="info tb1">
+                                                                <li><i class="icon-system_arrow"></i>Centralized fire alarm system</li>
+                                                                <li><i class="icon-system_arrow"></i>Automatically-activated heat/smoke detectors</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-area">
+                                                        <div class="item-header">
+                                                            <div class="img-box">
+                                                                <img src="/images/pc/service/storage_system_security.png" alt="보안 시스템">
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-body ">
+                                                            <div class="title"><span class="tt4">Security system</span></div>
+                                                            <div class="desc tb1">
+                                                                <p>Cutting-edge security system operated on 24-hour basis in partnership with Secom, Korea’s top security service provider</p>
+                                                            </div>
+                                                            <ul class="info tb1">
+                                                                <li><i class="icon-system_arrow"></i>CCTV surveillance (recorded on 24-hour basis)</li>
+                                                                <li><i class="icon-system_arrow"></i>Strict control/management of all who enter or exit</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //[0812]텍스트변경 -->
+                                            </div>
+                                        </article>
+                                        <article class="storage-area">
+                                            <div class="article-header">
+                                                <div class="title"><span class="tt2">Location</span></div>
+                                            </div>
+                                            <div class="article-body">
+                                                <div class="storage-navigation">
+                                                    <div class="map-area">
+                                                        <img class="only-pc" src="/images/pc/service/storage_map.png" alt="location sample">
+                                                        <img class="only-mb" src="/images/mobile/service/storage_map.png" alt="location sample">
+                                                    </div>
+                                                    <div class="navigation-area">
+                                                        <div class="item-area">
+                                                            <div class="item-header">
+                                                                <div class="title">
+                                                                    <i class="icon-navi_address"></i>
+                                                                    <span class="tt3">Jangheung Art Storage</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-body">
+                                                                <div class="navi-info  tb1">
+                                                                    <!-- [0812]텍스트변경 -->
+                                                                    <div class="key">Land-lot number</div>
+                                                                    <!-- //[0812]텍스트변경 -->
+                                                                    <div class="value">
+                                                                        <p>45-10, Iryeong-ri, Jangheung-myeon, Yangju-si, Gyeonggi-do, Korea <span class="only_ib-pc">/ </span> <br class="only-mb">5-1, Iryeong-ri, Jangheung-myeon, Yangju-si, Gyeonggi-do, Korea</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="navi-info tb1">
+                                                                    <!-- [0812]텍스트변경 -->
+                                                                    <div class="key">Road name</div>
+                                                                    <!-- //[0812]텍스트변경 -->
+                                                                    <div class="value">
+                                                                        <p>113, Gwonyul-ro, Jangheung-myeon, Yangju-si, Gyeonggi-do, Korea <span class="only_ib-pc">/ </span> <br class="only-mb">143-8, Gwonyul-ro, Jangheung-myeon, Yangju-si, Gyeonggi-do, Korea</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="tab-cont " id="tab-cont-3">
+                                        <article class="storage-area">
+                                            <div class="article-header">
+                                                <div class="title"><span class="tt2">Pyeongchang Art Storage</span></div>
+                                            </div>
+                                            <div class="article-body">
+                                                <div class="storage-intro">
+                                                    <p class="tb1">The units at Pyeongchang Art Storage are 19.8 to 26.4 square meters in size. Located in Pyeongchang-dong, Seoul, it is especially useful for clients who wish to check on their artworks often or wish to exchange an artwork or submit an artwork for auction.</p>
+                                                </div>
+                                                <div class="storage-image">
+                                                    <img src="/images/pc/service/storage_pyongchang.png" alt="평창 아트 스토리지">
+                                                </div>
+                                            </div>
+                                        </article>
+                                        <article class="storage-area">
+                                            <div class="article-header">
+                                                <div class="title"><span class="tt2">Art Storage System</span></div>
+                                            </div>
+                                            <div class="article-body">
+                                                <!-- [0812]텍스트변경 -->
+                                                <div class="storage-system">
+                                                    <div class="item-area">
+                                                        <div class="item-header">
+                                                            <div class="img-box">
+                                                                <img src="/images/pc/service/storage_system_temp.png" alt="항온 항습 시스템">
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-body">
+                                                            <div class="title"><span class="tt4">HVAC system</span></div>
+                                                            <div class="desc tb1">
+                                                                <p>24-hour maintenance of optimum temperature and humidity levels per artwork</p>
+                                                            </div>
+                                                            <ul class="info tb1">
+                                                                <li><i class="icon-system_arrow"></i>Temperature: 18 to 22 degrees Celsius / Humidity: 45 to 55%</li>
+                                                                <li><i class="icon-system_arrow"></i>Maintained year-round (figures can be adjusted if necessary)</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-area">
+                                                        <div class="item-header">
+                                                            <div class="img-box">
+                                                                <img src="/images/pc/service/storage_system_prevention.png" alt="방재 시스템">
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-body">
+                                                            <div class="title"><span class="tt4">Emergency ventilation system</span></div>
+                                                            <!-- [0516]줄바꿈수정 -->
+                                                            <div class="desc tb1">
+                                                                <p>Extinguishing of fires (with halon gas) without damaging artworks</p>
+                                                            </div>
+                                                            <!-- // [0516]줄바꿈수정 -->
+                                                            <ul class="info tb1">
+                                                                <li><i class="icon-system_arrow"></i>Centralized fire alarm system</li>
+                                                                <li><i class="icon-system_arrow"></i>Automatically-activated heat/smoke detectors</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item-area">
+                                                        <div class="item-header">
+                                                            <div class="img-box">
+                                                                <img src="/images/pc/service/storage_system_security.png" alt="보안 시스템">
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-body ">
+                                                            <div class="title"><span class="tt4">Security system</span></div>
+                                                            <div class="desc tb1">
+                                                                <p>Cutting-edge security system operated on 24-hour basis in partnership with Secom, Korea’s top security service provider</p>
+                                                            </div>
+                                                            <ul class="info tb1">
+                                                                <li><i class="icon-system_arrow"></i>CCTV surveillance (recorded on 24-hour basis)</li>
+                                                                <li><i class="icon-system_arrow"></i>Strict control/management of all who enter or exit</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- //[0812]텍스트변경 -->
+                                            </div>
+                                        </article>
+                                        <article class="storage-area">
+                                            <div class="article-header">
+                                                <div class="title"><span class="tt2">Location</span></div>
+                                            </div>
+                                            <div class="article-body">
+                                                <div class="storage-navigation">
+                                                    <div class="map-area">
+                                                        <img class="only-pc" src="/images/pc/service/storage_map.png" alt="location sample">
+                                                        <img class="only-mb" src="/images/mobile/service/storage_map.png" alt="location sample">
+                                                    </div>
+                                                    <div class="navigation-area">
+                                                        <div class="item-area">
+                                                            <div class="item-header">
+                                                                <div class="title">
+                                                                    <i class="icon-navi_address"></i>
+                                                                    <span class="tt3">Pyeongchang Art Storage</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-body">
+                                                                <div class="navi-info tb1">
+                                                                    <!-- [0812]텍스트변경 -->
+                                                                    <div class="key">Land-lot number</div>
+                                                                    <!-- //[0812]텍스트변경 -->
+                                                                    <div class="value">
+                                                                        <p>465-10, Pyeongchang-dong, Jongno-gu, Seoul, Korea</p>
+                                                                        <p>98, Pyeongchang-dong, Jongno-gu, Seoul, Korea</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="navi-info tb1">
+                                                                    <!-- [0812]텍스트변경 -->
+                                                                    <div class="key">Road name</div>
+                                                                    <!-- //[0812]텍스트변경 -->
+                                                                    <div class="value">
+                                                                        <p>11, Pyeongchang 31-gil, Jongno-gu, Seoul, Korea</p>
+                                                                        <p>24, Pyeongchang 30-gil, Jongno-gu, Seoul, Korea</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="item-area">
+                                                            <div class="item-header">
+                                                                <div class="title">
+                                                                    <i class="icon-navi_car"></i>
+                                                                    <span class="tt3">By car</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-body">
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key">From Gangnam-gu</div>
+                                                                    <div class="value">
+                                                                        <p>Gangbyeon Expressway &gt; Naebu Expressway (toward Hongje-dong) &gt;
+                                                                            Naebu Expressway-Kookmin University ramp &gt; Kookmin University (toward Bugak Tunnel) &gt;
+                                                                            after passing through Bugak Tunnel, turn right at crosswalk</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key">From Jongno-gu</div>
+                                                                    <div class="value">
+                                                                        <p>Gwanghwamun &gt; turn right at Gyeongbokgung Station (Line 3) (toward Jahamun Tunnel) &gt;
+                                                                            Hongji-dong Samgeori (Sangmyung University) &gt; head toward Bugak Tunnel &gt;
+                                                                            turn left at crosswalk in front of Lotte Apt.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="item-area">
+                                                            <div class="item-header">
+                                                                <div class="title">
+                                                                    <i class="icon-navi_bus"></i>
+                                                                    <span class="tt3">Bus</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-body">
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key">Lotte Samsung Apt.</div>
+                                                                    <div class="value">
+                                                                        <p>1711, 1020, 7211, 110, 153</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="item-area">
+                                                            <div class="item-header">
+                                                                <div class="title">
+                                                                    <i class="icon-navi_subway"></i>
+                                                                    <span class="tt3">Subway</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-body">
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key subway-line"><span class="subway-color line-3">Line <i>3</i></span></div>
+                                                                    <div class="value">
+                                                                        <p>Exit 3 &gt; transfer to (bus) 1020 or 1711 &gt; get off at Lotte Apt.</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key subway-line"><span class="subway-color line-1">Line <i>1</i></span></div>
+                                                                    <div class="value">
+                                                                        <p>In front of Yujin Shopping Center &gt; transfer to (bus) 110 or 153 &gt; get off at Lotte Apt.</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="navi-info tb1">
+                                                                    <div class="key subway-line"><span class="subway-color line-5">Line <i>5</i></span></div>
+                                                                    <div class="value">
+                                                                        <p>Exit 3 &gt; transfer to (bus) 153 or 7211 &gt; get off at Lotte Apt.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <!-- 문의하기 -->
+                                    <!-- [0812]텍스트변경 -->
+
+
+                                    <article class="inquiry-article ">
+                                        <div class="inquiry-box">
+                                            <div class="typo-area">
+                                                <div class="icon-box">
+                                                    <i class="icon-academy_inquiry"></i>
+                                                </div>
+                                                <div class="title-box">
+                                                    <strong>Contact</strong>
+                                                </div>
+                                                <div class="info-guide">
+                                                    <div class="manager-box"> <span>Head of Team, Art Storage Team</span> <em>Kim Kyoungsoon</em> </div>
+                                                    <div class="contact-box">
+                                                        <ul>
+                                                            <li><span>T.</span> <em>+82-10-4703-0481</em></li>
+                                                            <li><span>E.</span> <a href="mailto:kks@seoulauction.com"><em>kks@seoulauction.com</em></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="btn-area">
+                                                <a class="btn btn_gray_line" href="#" role="button"><span>1:1 Inquiry</span></a>
+                                            </div>
+                                        </div>
+                                    </article>
+
+
+
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+            <!-- //container -->
+
+            <!-- footer -->
+            <footer class="footer">
+                <div class="innerfooter">
+                    <section class="flex_wrap footer_menubox">
+                        <ul class="footer-gnbmenu">
+                            <li><a href="#">ABOUT US</a></li>
+                            <li><a href="#">PRESS</a></li>
+                            <li><a href="#">CAREERS</a></li>
+                            <li><a href="#">LOCATION</a></li>
+                            <li><a href="#">CUSTOMER CENTER</a></li>
+                        </ul>
+
+                        <ul class="snsbox_icon">
+                            <li><a href="#" class="sns-icon sns-icon01"></a></li>
+                            <li><a href="#" class="sns-icon sns-icon02"></a></li>
+                            <li><a href="#" class="sns-icon sns-icon03"></a></li>
+                            <li><a href="#" class="sns-icon sns-icon04"></a></li>
+                            <li><a href="#" class="sns-icon sns-icon05"></a></li>
+                        </ul>
+                    </section>
+                    <section class="flex_wrap footer_infobox">
+                        <div class="footer-infomenubox">
+                            <ul class="flex_wrap footer-infomenu">
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Information Mgmt. Rules</a></li>
+                            </ul>
+                            <div class="Familysite-selectbox">
+                                <span class="Familysite">Family Site</span>
+                                <ul class="familyselect">
+                                    <li><a href="https://www.auctionblue.com/index" target="_blank">Print Bakery</a></li>
+                                    <li><a href="https://printbakery.com/" target="_blank">Auction Blue</a></li>
+                                    <li><a href="https://sotwo.com/" target="_blank">SOTOW</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <p class="bottom-p-spacing20">
+                            CEO : Lee Ok-Kyung Tax Registration No : 101-81-46818 E-commerce Registration : Jong-Ro No. 01-2173<br>
+                            11, Pyeongchang 31-gil, Jongno-gu, Seoul, Korea T. +82-02-395-0330<br>
+                            ⓒ Seoul Auction Corp.
+                        </p>
+                        <p>
+                            Any unauthorized reproduction, transmission, distribution, and/or crawling/scraping of images, videos, text, and other material or information <br>
+                            (including the website screen) is strictly forbidden by the Copyright Act, the Unfair Competition Prevention and Trade Secret Protection Act, and other relevant law.
+                        </p>
+                    </section>
+                </div>
+            </footer>
+
+            <!-- //footer -->
+
+            <!-- stykey -->
+
+            <div class="scroll_top-box">
+                <div class="box-inner">
+                    <a href="#" class="btn-scroll_top js-scroll_top"><i class="icon-scroll_top"></i></a>
+                </div>
+            </div>
+            <!-- // stykey -->
+
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="/js/plugin/jquery.min.js"></script>
+    <!--[if lt IE 9]> <script src="/js/plugin/html5shiv.js"></script> <![endif]-->
+    <script type="text/javascript" src="/js/plugin/prefixfree.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/plugin/jquerylibrary.js" type="text/javascript"></script>
+    <!-- [0516]삭제
+  <script type="text/javascript" src="/js/plugin/mojs.core.js" type="text/javascript"></script> 
+-->
+
+
+    <script type="text/javascript" src="/js/common.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/pages_common_en.js" type="text/javascript"></script>
+
+
+
+
+
+
+    <!-- [0728]비디오 세로사이즈 -->
+    <script>
+        var _videoAnchor = $(".video_img-box a");
+        var _videoAnchorImg = $(".video_img-box a img");
+        _videoAnchorImg.each(function() {
+            _videoAnchor = $(this).parent(_videoAnchor);
+
+            if ($(this).width() < $(this).height()) {
+                _videoAnchor.addClass("vertical");
+            } else {
+                _videoAnchor.removeClass("vertical");
+            }
+        })
+    </script>
+    <!-- //[0728]비디오 세로사이즈 -->
+
+    <!-- [0809]마이페이지 사이드 유저네임 글자수제한 -->
+    <script>
+        var asideUsername = $("aside .mem-name-wrap .tt2");
+        asideUsername.each(function() {
+            var asideUsernameTxt = $(this).text();
+            var asideUsernameLimit = 9;
+            if (asideUsernameTxt.length > asideUsernameLimit) {
+                $(this).text(asideUsernameTxt.substr(0, asideUsernameLimit) + "...")
+            }
+        })
+    </script>
+    <!-- //[0809]마이페이지 사이드 유저네임 글자수제한 -->
+
+    <!-- tab menu -->
+    <script>
+        $('.js-maintab_list a').on('click', function(e) {
+            e.preventDefault();
+            var tar = $(this).position().left;
+            var scrollX = tar - ($(".js-maintab_list").parents(".tab-area").width() / 2) + $(this).width() / 2;
+
+
+            if ($(this).parents('li').hasClass('active')) return false;
+            var id = $(this).attr('href');
+            if ($(id).length > 0) {
+                $('.tab-cont').removeClass('active');
+                $(id).addClass('active');
+                $(this).parents('li').siblings('li').removeClass('active').end().addClass('active');
+
+                $(".js-maintab_list").parents(".tab-area").scrollLeft(scrollX);
+            }
+
+            return false;
+        });
+    </script>
+
+</body>
+
+</html>

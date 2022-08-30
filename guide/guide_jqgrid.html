@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<!-- header -->
+	<meta charset="UTF-8">
+    <title>@@title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" id="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/library/csslibrary.css">
+    <link rel="stylesheet" href="/resources/css/common_pub.min.css">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+    <script src="/resources/js/library/jquery.min.js"></script>
+    <script src="/resources/js/library/jquerylibrary.min.js"></script>
+    <script src="/resources/js/common_pub.min.js"></script>
+	<!-- //header -->
+</head>
+
+<body class="pageclass">
+	<div class="wrapper">
+		
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents"  style="padding:50px">
+
+
+        <div class="table-box" style="width:1200px" >
+            <table id="jqGrid_list0" class="jqGrid_list" ></table>
+            <div id="jqGrid_page0"></div>
+        </div>
+        <script>
+          /* 게시판 리스트  */
+          var arrtSetting = function (rowId, val, rawObject, cm) {
+            console.log(rowId, val, rawObject, cm)
+              var attr = rawObject.attr[cm.name], result;
+              if (attr.rowspan) {
+                  result = ' rowspan=' + '"' + attr.rowspan + '"';
+              } else if (attr.display) {
+                  result = ' style="display:' + attr.display + '"';
+              }
+              return result;
+          };
+          var list_data = [
+            {'no': '1',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "2"},}
+            },
+            {'no': '2',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {display: "none"},}
+            },
+            {'no': '3',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '4',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '5',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '6',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '7',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '8',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '9',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '10',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '11',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '12',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '13',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '14',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '15',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            },
+            {'no': '16',
+              'date' : 'YYYY.MM.DD' ,
+              'questionName' : '홍길동' ,
+              'serviceName' : '서비스명이 노출됩니다.',
+              'questionContents' : '문의 내용이 노출됩니다. 문의내용이 노출됩니다.',
+              'state' : '접수' ,
+              'managerNmae' : '홍길북',   
+              'managerContents' : '처리 내용이 노출됩니다. 처리내용이 노출됩니다.',
+              attr: {serviceName: {rowspan: "none"},}
+            }
+          ];
+
+        </script>
+        <script> 
+
+          jQuery("#jqGrid_list0").jqGrid({ 
+            datatype: "local",
+            data: list_data,
+            //url:'/resources/js/@jqgrid_data.json',
+            //datatype: "json",
+            //width: '100%',
+            autowidth:true,
+            height: 'auto',
+              colNames:['No', '일자', '문의자', '서비스명', '문의 내용', '상태', '처리자', '처리내용'],
+              colModel:[
+                {name:'no',index:'no', width:60, },
+                {name:'date',index:'date', width:120,  sorttype:"date" },
+                {name:'questionName',index:'questionName', width:80,  },
+                {name:'serviceName',index:'serviceName', width:150, cellattr: arrtSetting },
+                {name:'questionContents',index:'questionContents', width:320, formatter: 'tag', cellattr: function () { return " class='a_link'" }  },		
+                {name:'state',index:'state', width:70,   },
+                {name:'managerNmae',index:'managerNmae', width:80,   },
+                {name:'managerContents',index:'managerContents', width:320,   },
+              ],
+              pager: '#jqGrid_page0',
+              viewrecords: false,    //  형재보이는수 / 총겟수  
+              rowNum: 12,
+              
+              //gridview:true, 
+              sortname: 'id',
+              sortorder: 'desc',
+
+              //multiselect: true,
+              loadonce: true,
+              loadComplete:function(data){
+                //console.log(data.length, data.realNum)                     
+                var total = 0;
+                $("#nodata").remove();
+                if(data.rows.length==0){
+                  $("#jqGrid_list0.ui-jqgrid-btable").after('<div class="data-empty"> <p class="txt_empty">데이터가 없습니다.</p> </div>')
+                }else{
+                  total = data.rows.length;
+                }
+                console.log(">>>" + total);
+                // $(".ui-jqgrid .ui-jqgrid-bdiv").css({ "overflow-x":"hidden", "overflow-y": "scroll", "height":"176px" }).find(".ui-jqgrid-hbox").css({"padding-right": "20px"});
+              },
+              //shrinkToFit: false,   // 가로크기 고정일때
+            });
+          
+          /* theder */
+          jQuery("#jqGrid_list0").jqGrid('setGroupHeaders', {
+              useColSpanStyle: true,
+              groupHeaders: [{
+                    startColumnName: 'questionName',
+                    numberOfColumns: 4,
+                    titleText: '<strong>문의</strong>'
+                  },
+                  {
+                    startColumnName: 'managerNmae',
+                    numberOfColumns: 2,
+                    titleText: '<strong>처리</strong>'
+                  }
+              ]
+          });
+          
+          /* 리싸이징 */
+          $(window).on("resize.jqGrid", function() { console.log("googoog");
+            $(".jqGrid_list").jqGrid("setGridWidth", $(this).closest(".con-body").width());
+          });
+
+
+
+          
+          //$("#jqGrid_list0").jqGrid("setGridWidth", 1060);               // 테이블 크기변경 
+          //$("#jqGrid_list0").jqGrid('setColWidth', 'inquiryTitle', 300); // 컬럼 크기변경 
+          //$("#jqGrid_list0").setGridParam( {rowNum:16} );                // 보여지는 라인 변경
+          //$("#jqGrid_list0").trigger("reloadGrid");                      // 데이터 리로드 
+          
+
+        </script>
+
+        <hr>
+
+			</div>
+		</div>
+		<!-- //container -->
+
+	
+	</div>
+</body>
+</html>

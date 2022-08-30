@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>sample</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" id="viewport"
+    content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <link rel="stylesheet" href="/resources/css/library/csslibrary.css">
+  <link rel="stylesheet" href="/resources/css/common_pub.min.css">
+    <!--
+    [if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+  <script src="/resources/js/library/jquery.min.js"></script>
+  <script src="/resources/js/library/jquerylibrary.min.js"></script>
+  <script src="/resources/js/common_pub.min.js"></script>
+  <style type="text/css">
+    .scroll_top {
+      display: none; width: 60px; height: 60px; margin: 0 0 0 500px;
+      position: absolute; bottom: 50px; left: 50%;
+      cursor: pointer; z-index: 100;
+    }
+
+    .scroll_top a {
+      display: block; width: 60px; height: 60px; margin-left: -60px;
+      position: relative;
+      color: #ffffff; text-align: center; line-height: 60px;
+      border-radius: 50%;
+      background-color: #333333;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+
+<body class="trp-sample">
+  <div class="sub-wrap pageclass">
+    <!-- header -->
+    <div id="header"> header </div>
+    <!-- //header -->
+
+    <!-- container -->
+    <div id="container">
+      <div id="contents">
+        <div class="body-inner">
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+          container > contents <br>
+        </div>
+      </div>
+    </div>
+    <!-- //container -->
+
+    <!-- footer -->
+    <div id="footer"> footer
+      <!-- ================= scroll_top ===================== -->
+      <div class="scroll_top">
+        <a href="#"><span>TOP</span></a>
+      </div>
+      <script>
+        /*
+                trpScrollPositionReturn         : 스크롤 움직임에 따라 타겟 높이 값을 변경하여 따라다니게 한다.
+                * @option	positionTar		    : 적용할 타겟 선택자            (기본값 : this)
+                * @option	heightTar			: 적용할 타켓 높이값            (기본값 : this.height)
+                * @option	showHeight			: 적용할 타겟 보여질 위치        (기본값 : window.height)
+                * @option	bottonTar		    : 적용할 타겟 하단 여백          (기본값 : 50)
+                * @option	bottomStop		    : 적용할 타겟 하단 멈추어야할 위치 (기본값 : 100)
+                */
+        $(".scroll_top").trpScrollSync({
+          heightTar: 60,
+          showHeight: 300,
+          bottonTar: 50,
+          bottomStop: 300
+        })
+      </script>
+      <!-- ================= scroll_top ===================== -->
+    </div>
+    <!-- //footer -->
+
+  </div>
+</body>
+
+</html>
