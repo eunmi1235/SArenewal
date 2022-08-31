@@ -13,10 +13,10 @@ function PubUI() {
         });
     }, o.forms = function() {
         /* input del */
-        function e(o) {
+        function n(o) {
             ///console.log('$this.val()', $this.val());
-            var e = !o.prop("disabled");
-            "" != o.val() && e ? (o.siblings("button").css({
+            var n = !o.prop("disabled");
+            "" != o.val() && n ? (o.siblings("button").css({
                 display: "block"
             }), o.siblings("button").one("click", function() {
                 o.val(""), o.siblings("button").css({
@@ -27,9 +27,9 @@ function PubUI() {
             });
         }
         $("body").on("focusout", ".input_del input", function() {
-            e($(this));
+            n($(this));
         }), $("body .input_del input").each(function(o) {
-            e($(this));
+            n($(this));
         }), 
         /* select - box */
         $(".select2Basic").select2({
@@ -75,6 +75,14 @@ function PubUI() {
             window.history.back();
         });
     }, 
+    /* 탑버튼 보이기 */
+    $(window).scroll(function() {
+        400 < $(window).scrollTop() ? $(".js-scroll_top").addClass("show") : $(".js-scroll_top").removeClass("show");
+    }), 
+    /* 탑버튼 높이 변경 */
+    $(window).resize(function() {
+        0 < $(".proceeding-article").length && $(window).width() < 1024 ? $(".js-scroll_top").css("transform", "translateY(-70px)") : $(".js-scroll_top").css("transform", "");
+    }), 
     /* 초기실행 스크립트 */
     o.append_script = function() {///$("body").append( $(".js-append-script") );
     };
@@ -112,12 +120,12 @@ function responsiveDevices() {
 /* PC,MB images resize */function imagesResizePcMb() {
     ///document.querySelector(".imageViewer");
     ///console.log("googooowwww: " , _tar[0].naturalWidth, _tar.length);
-    for (var o = $(".imageViewer"), e = 0; e < o.length; e++) {
-        if (!o[e]) return !1;
+    for (var o = $(".imageViewer"), n = 0; n < o.length; n++) {
+        if (!o[n]) return !1;
         /*  
-     [2022-0707]원복 /[2022-0701] 고객사요청  */        var n = o[e].naturalWidth, i = o[e].naturalHeight;
-        $("body").hasClass("is_mb") ? (o[e].width = .55 * n, o[e].height = .55 * i) : (o[e].width = n, 
-        o[e].height = i)
+     [2022-0707]원복 /[2022-0701] 고객사요청  */        var e = o[n].naturalWidth, t = o[n].naturalHeight;
+        $("body").hasClass("is_mb") ? (o[n].width = .55 * e, o[n].height = .55 * t) : (o[n].width = e, 
+        o[n].height = t)
         /* var z = ((parseFloat($(window).width() / 1024) >= 1)?1:parseFloat($(window).width() / 1024));    
     var w = (parseFloat(parseInt($(_tar[i]).attr("size2"))) / 250) * 500 * z;
     _tar[i].width = w; */
@@ -127,15 +135,15 @@ function responsiveDevices() {
 }
 
 /* 팝업높이계산 */function popup_fixation(o) {
-    var e = o, n = $(".pop-body>.section", e).outerHeight() + 166, i = $(window).height();
-    function t() {
-        i = $(window).height(), 
+    var n = o, e = $(".pop-body>.section", n).outerHeight() + 166, t = $(window).height();
+    function i() {
+        t = $(window).height(), 
         /* 모바일일때 && mode-mb_full 경우 사용안함 */
-        (!$("body").hasClass("is_mb") || !$(".popup-align", e).hasClass("mode-mb_full")) && i <= n ? $(".popup-align", e).addClass("footer_fixed") : $(".popup-align", e).removeClass("footer_fixed");
+        (!$("body").hasClass("is_mb") || !$(".popup-align", n).hasClass("mode-mb_full")) && t <= e ? $(".popup-align", n).addClass("footer_fixed") : $(".popup-align", n).removeClass("footer_fixed");
     }
     $(window).on("resize", function() {
-        t();
-    }), t();
+        i();
+    }), i();
 }
 
 /* 모바일 모션 팝업 */function popup_motion_open(o) {
@@ -156,26 +164,26 @@ function popup_motion_close(o) {
 onclick="window.open('biddingOffline_ko-pc4.html', '','_blank');" 
 onclick="javascript:window_close();"
 */
-/* ========== 바디 높이 조절 ========== */function gnb_footer_resize(o, e) {
+/* ========== 바디 높이 조절 ========== */function gnb_footer_resize(o, n) {
     /*  $('.main-contents') */
-    var n = $("header.header").innerHeight(), i = $("footer.footer").innerHeight();
+    var e = $("header.header").innerHeight(), t = $("footer.footer").innerHeight();
     o ? ($("#contents").css({
         "padding-top": o,
-        "padding-bottom": e
+        "padding-bottom": n
     }), $("footer.footer").css({
-        "margin-top": -e
+        "margin-top": -n
     })) : ($("#contents").css({
-        "padding-top": n,
-        "padding-bottom": i
+        "padding-top": e,
+        "padding-bottom": t
     }), $("footer.footer").css({
-        "margin-top": -i
+        "margin-top": -t
     }));
 }
 
-function trpScrollTop(o, e) {
-    e = $(o).offset().top - ($("header.header").innerHeight() + e);
+function trpScrollTop(o, n) {
+    n = $(o).offset().top - ($("header.header").innerHeight() + n);
     $("html, body").animate({
-        scrollTop: e
+        scrollTop: n
     }, 300);
 }
 //# sourceMappingURL=maps/pages_common_en.js.map

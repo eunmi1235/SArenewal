@@ -289,7 +289,7 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/auction/online_sequence_deadline_before_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0812], [0714], [0622], [0617], [0613]',
+        etc         : '[0822](css,js), [0812], [0714], [0622], [0617], [0613]',
     },
     {
         stateLine   : "edit", 
@@ -299,27 +299,27 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/auction/online_sequence_deadline_ing_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0812], [0714], [0622], [0617], [0613]',
+        etc         : '[0822], [0812], [0714], [0622], [0617], [0613]',
     },
     {
-        stateLine   : "", 
+        stateLine   : "edit", 
         dep1 		: '',
         dep2 		: '',
         dep3 		: '온라인 경매마감',
         dep4 	  	: '',
         url 		: '/html/auction/online_sequence_deadline_after_en.html',
         pubUpdate 	: '2022-0812',
-        etc         : '',
+        etc         : '[0824], [0822]',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '',
         dep3 		: '작품응찰신청(서면)',
         dep4 	  	: '',
         url 		: '/html/auction/online_sequence_deadline_bidding_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0812], [0725](언어변환), [0628](css), [0613]',
+        etc         : ' [0812], [0725](언어변환), [0628](css), [0613]',
     },
     {
         stateLine   : "edit", 
@@ -329,7 +329,7 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/auction/offline_auction_go_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0812], [0714], [0622], [0617]',
+        etc         : '[0822], [0812], [0714], [0622], [0617]',
     },
     {
         stateLine   : "edit", 
@@ -349,7 +349,7 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/auction/offline_auction_ing_en.html',
         pubUpdate 	: '2022-0617',
-        etc 		: '[0812], [0714], [0622]',
+        etc 		: '[0822], [0812], [0714], [0622]',
     },
     {
         stateLine   : "edit", 
@@ -359,7 +359,7 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/auction/offline_auction_before_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0812], [0714], [0622], [0617], [0613]',
+        etc         : '[0822], [0812], [0714], [0622], [0617], [0613]',
     },
     {
         stateLine   : "edit",
@@ -369,7 +369,7 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/popup/auction-offline_auction_afterPopup_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0812], [0725](언어변환)',
+        etc         : '[0822], [0812], [0725](언어변환)',
     },
     {
         stateLine   : "edit", 
@@ -379,10 +379,10 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/auction/auctionView_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0812], [0803], [0728], [0725], [0714], [0712], [0628], [0617], [0613]',
+        etc         : '[0822], [0812], [0803], [0728], [0725], [0714], [0712], [0628], [0617], [0613]',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '상세 max',
         dep3 		: '',
@@ -392,7 +392,7 @@ __CONSTANT_LIST = [
         etc         : '[0812], [0803], [0728], [0725], [0714], [0712], [0628], [0617], [0613]',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '상세',
         dep3 		: '라이브 경매 진행 전',
@@ -402,14 +402,14 @@ __CONSTANT_LIST = [
         etc         : '[0812], [0803], [0728], [0725], [0714], [0712], [0628]',
     },
     {
-        stateLine   : "", 
+        stateLine   : "edit", 
         dep1 		: '',
         dep2 		: '상세',
         dep3 		: '라이브 경매종료',
         dep4 	  	: '',
         url 		: '/html/auction/auctionView_after_en.html',
         pubUpdate 	: '2022-0812',
-        etc         : '',
+        etc         : '[0826]',
     },
     
     {
@@ -438,7 +438,7 @@ __CONSTANT_LIST = [
 
     
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: 'popup',
         dep3 		: '낙찰수수료, 배송안내, 경매호가표 안내',
@@ -460,25 +460,25 @@ __CONSTANT_LIST = [
         etc         : '[0725], [0613]',
     },
     {
-        stateLine   : "", 
+        stateLine   : "edit", 
         dep1 		: '',
         dep2 		: '',
         dep3 		: '응찰중지, 하기-popup',
         dep4 	  	: '',
         url 		: '/html/popup/biddingOnlineBiddingPopup_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '',
+        etc         : '[0822]',
     },
 
     {
-        stateLine   : "", 
+        stateLine   : "edit", 
         dep1 		: '',
         dep2 		: '응찰하기-offline-pc',
         dep3 		: 'offline-pop 정회원_로그인후&LOT',
         dep4 	  	: '',
         url 		: '/html/auction/biddingOffline-pc1_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0803](css), [0712](css)',
+        etc         : '[0822](css), [0803](css), [0712](css)',
     },
 
 
@@ -494,34 +494,34 @@ __CONSTANT_LIST = [
         etc         : '[0803](css), [0712](css)',
     },
     {
-        stateLine   : "", 
+        stateLine   : "edit", 
         dep1 		: '',
         dep2 		: '',
         dep3 		: 'offline-pop 준회원',
         dep4 	  	: '',
         url 		: '/html/auction/biddingOffline-pc3_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0803], [0609]',
+        etc         : '[0822], [0803], [0609]',
     },
     {
-        stateLine   : "", 
+        stateLine   : "edit", 
         dep1 		: '',
         dep2 		: '',
         dep3 		: 'offline-pop 비회원',
         dep4 	  	: '',
         url 		: '/html/auction/biddingOffline-pc4_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0803](css), [0609]',
+        etc         : '[0822], [0803](css), [0609]',
     },
     {
-        stateLine   : "", 
+        stateLine   : "edit", 
         dep1 		: '',
         dep2 		: '응찰하기-offline-mb',
         dep3 		: 'offline-pop 정회원_로그인&LOT',
         dep4 	  	: '',
         url 		: '/html/auction/biddingOffline-mb1_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0712]',
+        etc         : '[0822], [0712]',
     },
     {
         stateLine   : "", 
@@ -662,7 +662,7 @@ __CONSTANT_LIST = [
         etc         : '',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '',
         dep3 		: '작가-info',
@@ -681,7 +681,7 @@ __CONSTANT_LIST = [
 
 
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: 'Private Sale',
         dep2 		: '전시',
         dep3 		: 'info',
@@ -736,7 +736,7 @@ __CONSTANT_LIST = [
     },
 
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '',
         dep3 		: '리스트',
@@ -831,10 +831,10 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/service/loan_en.html',
         pubUpdate 	: '2022-0609',
-        etc         : '[0812], [0725](언어변환)',
+        etc         : '[0822], [0812], [0725](언어변환)',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '미술품보관',
         dep3 		: '',
@@ -851,7 +851,7 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/service/showroom_en.html',
         pubUpdate 	: '2022-0609',
-        etc         : '[0812], [0725](언어변환), [0708]',
+        etc         : '[0822], [0812], [0725](언어변환), [0708]',
     },
     {
         stateLine   : "edit", 
@@ -861,10 +861,10 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/service/marketing_en.html',
         pubUpdate 	: '2022-0609',
-        etc         : '[0812](원복0718), [0725](언어변환)',
+        etc         : '[0824], [0822], [0812](원복0718), [0725](언어변환)',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '',
         dep3 		: 'popup',
@@ -940,7 +940,7 @@ __CONSTANT_LIST = [
 
 
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: 'Sell',
         dep2 		: '위탁안내',
         dep3 		: '',
@@ -976,7 +976,7 @@ __CONSTANT_LIST = [
         etc         : '',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '아이디찾기',
         dep3 		: '',
@@ -986,7 +986,7 @@ __CONSTANT_LIST = [
         etc         : '[0812], [0622]',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '비밀번호찾기',
         dep3 		: '',
@@ -1006,7 +1006,7 @@ __CONSTANT_LIST = [
         etc         : '[0728]',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '[EDM]',
         dep3 		: '임시 비밀번호 발급 안내',
@@ -1033,7 +1033,7 @@ __CONSTANT_LIST = [
         etc         : '',
     }, 
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '개인회원',
         dep3 		: '',
@@ -1072,7 +1072,7 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/member/member_join_5_en.html',
         pubUpdate 	: '2022-0530',
-        etc         : '[0812], [0809], [0617], [0614], [0613]',
+        etc         : '[0822], [0812], [0809], [0617], [0614], [0613]',
     },
     {
         stateLine   : "", 
@@ -1110,7 +1110,7 @@ __CONSTANT_LIST = [
 
 
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '결제',
         dep2 		: '정회원 ',
         dep3 		: '결제(신용카드)',
@@ -1130,7 +1130,7 @@ __CONSTANT_LIST = [
         etc         : '',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '',
         dep3 		: '결제완료',
@@ -1150,7 +1150,7 @@ __CONSTANT_LIST = [
         etc         : '',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '작품 ',
         dep3 		: '결제(신용카드)',
@@ -1177,7 +1177,7 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/payment/payment_work_end_1_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0812]',
+        etc         : '[0822], [0812]',
     },
     {
         stateLine   : "del", 
@@ -1211,7 +1211,7 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/search/search_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0812], [0809], [0617]',
+        etc         : '[0825], [0824], [0822], [0812], [0809], [0617]',
     },
     {
         stateLine   : "", 
@@ -1236,7 +1236,7 @@ __CONSTANT_LIST = [
 
 
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: 'footer',
         dep2 		: '회사소개',
         dep3 		: '',
@@ -1246,7 +1246,7 @@ __CONSTANT_LIST = [
         etc         : '[0812],[0725](언어변환)',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '연혁',
         dep3 		: '',
@@ -1316,7 +1316,7 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/footer/info_aution_en.html',
         pubUpdate 	: '2022-0609',
-        etc         : '[0812](원복0718), [0725](언어변환)',
+        etc         : '[0822], [0812](원복0718), [0725](언어변환)',
     }, 
     {
         stateLine   : "", 
@@ -1351,7 +1351,7 @@ __CONSTANT_LIST = [
         etc         : '[0714], [0712]',
     }, 
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '',
         dep3 		: '이전버전 (2019.06.01)',
@@ -1522,7 +1522,7 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/mypage/auction_live_history1_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0812], [0725](언어변환), [0617]',
+        etc         : '[0822], [0812], [0725](언어변환), [0617]',
     },
     {
         stateLine   : "", 
@@ -1595,7 +1595,7 @@ __CONSTANT_LIST = [
         etc         : '[0725](언어변환), [0705](css), [0617]',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: 'POPUP',
         dep3 		: '결제/구매내역 안내',
@@ -1612,7 +1612,7 @@ __CONSTANT_LIST = [
         dep4 	  	: '',
         url 		: '/html/mypage/favorite_en.html',
         pubUpdate 	: '2022-0603',
-        etc         : '[0728], [0617], [0614](css)',
+        etc         : ' [0728], [0617], [0614](css)',
     },
     {
         stateLine   : "", 
@@ -1647,7 +1647,7 @@ __CONSTANT_LIST = [
     },
     */
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '1:1문의',
         dep3 		: '리스트',
@@ -1677,7 +1677,7 @@ __CONSTANT_LIST = [
         etc         : '[0705](css), [0613](css)',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '',
         dep3 		: '문의',
@@ -1707,7 +1707,7 @@ __CONSTANT_LIST = [
         etc         : '',
     },
     {
-        stateLine   : "edit", 
+        stateLine   : "", 
         dep1 		: '',
         dep2 		: '',
         dep3 		: '회원정보수정 - 정보수정(일반회원)',
@@ -1727,7 +1727,7 @@ __CONSTANT_LIST = [
         etc 		: '[0622]',
     },
     {
-        stateLine   : "edit",
+        stateLine   : "",
         dep1 		: '',
         dep2 		: '',
         dep3 		: '회원탈퇴',
