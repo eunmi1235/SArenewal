@@ -186,7 +186,7 @@
                             <li><a href="#">아트컨설팅&#38;기업마케팅</a></li> 
                         </ul>
                     </li> 
-<!--
+
                     <li class="subGnbmenu-tit m-ver"> 
                         <span class="gnbmenu_arrow modebox">Light Mode
                             <label for="dark" class="mode-toggle">
@@ -195,7 +195,7 @@
                             </label> 
                         </span> 
                     </li>
--->
+
                 </ul>
                 <figure class="blacklotbox">
                     <a href="https://www.blacklot.com/" target="_blank"> 
@@ -216,20 +216,9 @@
 <!--[if lt IE 9]> <script src="/js/plugin/html5shiv.js"></script> <![endif]-->
 <script src="../../../js/plugin/prefixfree.min.js"></script>    
 <script src="../../../js/plugin/swiper.min.js" type="text/javascript"></script> 
-<script src="../../../js/common.js" type="text/javascript"></script>  
-<script src="../../../js/main.js" type="text/javascript"></script>  
-
-<script>
-    const beltNoticeSwiper = new Swiper(".belt-swiper", { 
-        /* 상단 텍스트 공지 swiper */
-        autoplay: { 
-            delay: 3500,  
-        },  
-        initialSlide : 1,
-        allowTouchMove:false, /* 마우스 및 손가락 터치 시 슬라이드 이동 가능여부 */
-        touchMoveStopPropagation: true,   /* touchmove 중지 */
-        direction:'vertical',
-        loop: true,    
-    });   
-</script> 
-
+<script src="../../../js/common.js" type="text/javascript"></script> 
+<script src="/js/main.js" type="text/javascript"> 
+    if(window.location.href == 'index.html'){
+        location.href = 'index.html';  
+    }
+</script>
