@@ -16,14 +16,7 @@ $(function(){
         $(".auctionTab-contents").eq(IngTab).addClass('on');  
     });
     
-    /* auction thumbnail hover 기능 */ 
-    $('.auction-thumbbox').mouseenter(function(){  
-        $('.auction-thumbbox>.auction-thumb').removeClass('on'); 
-        $(this).children('.auction-thumb').addClass('on');  
-    });
-    $('.auction-thumb').mouseleave(function(){
-        $(this).removeClass('on'); 
-    });
+    
     //auction haert 버튼 
     $('.wish_heart').click(function(){
         $(this).toggleClass('on');
@@ -119,7 +112,7 @@ $(function(){
     });
 
     /* pc 다크모드 */
-    $('.darkmodeBg').click(function () {
+    $('.darkmodeBg').click(function(){
 
         $('*').toggleClass('dark'); 
 
@@ -159,28 +152,6 @@ $(function(){
             localStorage.setItem('theme', 'dark');
         }
     });
-    /* 다크모드 새로고침 시 */
-    window.addEventListener('DOMContentLoaded', () => {
-        // console.log("theme ", localStorage.getItem('theme'));
-
-        $('*').toggleClass(localStorage.getItem('theme'));
-
-        $('.auctionTab-btn').click(function () {
-            const darkIngTab = $(this).index();
-            $('.auctionTab-btn').removeClass('dark');
-            $('.auctionTab-contents').removeClass('dark');
-
-            $(this).addClass('dark');
-            $(".auctionTab-contents").eq(darkIngTab).addClass('dark');
-        });
-
-        $('.darktxt').text('다크모드로 보기');
-        $('.darktxt.dark').text('라이트모드로 보기');
-        $('.darktxt-en').text('Dark Mode');
-        $('.darktxt-en.dark').text('Ligth Mode');
-
-        $('.mode-toggle>input').addClass(localStorage.getItem('theme'));
-    });  
     /* 다크모드 버튼 hover */
     $('.darkmodeBg').hover(function () {
         $('.darkmode').toggleClass('active');
@@ -192,8 +163,7 @@ $(function(){
     }, function () {
         $('.darkmode.dark').toggleClass('active');
     }); 
-});
-    
+}); //종료구문 
     
 // 상단텍스트공지 
 const beltNoticeSwiper = new Swiper(".belt-swiper", {   
@@ -358,6 +328,15 @@ if (matchMedia("all and (min-width: 1024px)").matches) {
             $('.swiper-button-next.slide-btnright, .swiper-button-prev.slide-btnleft').css("background-color",'transparent');
         });
     });  
+
+    /* auction thumbnail hover 기능 */ 
+    $('.auction-thumbbox').mouseenter(function(){  
+        $('.auction-thumbbox>.auction-thumb').removeClass('on'); 
+        $(this).children('.auction-thumb').addClass('on');  
+    });
+    $('.auction-thumb').mouseleave(function(){
+        $(this).removeClass('on'); 
+    });
  
     /* 메인팝업 pc 없음 */
     $('.main-popupBg').removeClass('on');
@@ -397,6 +376,14 @@ if (matchMedia("all and (min-width: 1024px)").matches) {
          $('body').css({'overflow':'hidden'});
     }
     $('main-popupBg').toggleClass('on');
+
+    /* auction thumbnail hover 기능 없애기 */  
+    $('.auction-thumbbox').off('mouseenter', function(){
+        $('.auction-thumbbox>.auction-thumb').removeClass('on'); 
+    }); 
+    $('.auction-thumb').off('mouseleave', function(){ 
+        $(this).removeClass('on');  
+    }); 
     
     /* platform */
     $('.platform-img.pc-ver').hide();    
@@ -555,7 +542,4 @@ $(window).resize(function(){
             },
         },
     });
-});      
-
-const main = $(document).load('index.html');
-const mainEng = $(document).load('index_en.html');   
+});       

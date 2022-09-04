@@ -1389,25 +1389,35 @@ body.dark::-webkit-scrollbar-track
 body.dark,
 .header_nav.dark,
 .topsearch>input.dark,
-.header_utilitymenu.dark {
+.header_utilitymenu.dark,
+.header_navbox.dark,
+.header-border.dark .header_utilitymenu,
+.header-border.dark .header_navbox,
+.header-border.dark .header_nav,
+.header-border.dark .topsearch>input { 
     background-color: #222;
     color: #fff;
 }
 .header_beltbox.dark,
-.header_beltTit>a.dark {
+.header_beltTit>a.dark,
+.header-border.dark>.header_beltbox {
     background-color: #f6f6f6;
     color: #111;
 }
-.header_utilitymenu>li>a.dark {
+.header_utilitymenu>li>a.dark,
+.header-border.dark .header_utilitymenu>li>a {
     color: #6e6e6e;
 }
-.header_utilitymenu.dark>li.dark:before {
+.header_utilitymenu.dark>li.dark:before,
+.header-border.dark .header_utilitymenu>li:before {   
     background-color: #6e6e6e;
 }
 /* common color white */
 .header_nav.dark>li>a.dark,
+.header-border.dark .header_nav>li>a,
 .main-sectiontit.dark,
 .header_gnbmenu>li>a.dark,
+.header-border.dark .header_gnbmenu>li>a,
 /*.auctionTab-btn.on.dark,*/
 .auctionTab.dark > .auctionTab-btn.on,
 .familysite-box>h3.dark,
@@ -1416,7 +1426,9 @@ body.dark,
 .darkmodeBg.dark>span.dark,
 .auctionTab-btn.dark:hover,
 .keyword-search-tit.dark,
+.header-border.dark .keyword-search-tit,
 .recommend-search-part.dark > .keyword-search-tit,
+.header-border.dark .recommend-search-part > .keyword-search-tit, 
 .newsletter-form>input.dark {
     color: #fff;
 }
@@ -1430,7 +1442,9 @@ body.dark,
 .family-infotxt.dark,
 .keyword-all-del.dark,
 .bubble-box01.dark>li.dark>a.dark,
-.bubble-box02.dark>li.dark>a.dark {
+.bubble-box02.dark>li.dark>a.dark,
+.header-border.dark .bubble-box01>li>a,
+.header-border.dark .bubble-box02>li>a {  
     color: #999;
 }
 .playBtn.dark {
@@ -1473,7 +1487,8 @@ body.dark,
     color: #333;
 }
 /* background transparent */
-.recent-keyword.dark.recent-keyword-none.dark {
+.recent-keyword.dark.recent-keyword-none.dark,
+.header-border.dark .recent-keyword.recent-keyword-none {  
     background: #2e2e2e;
 }
 .newsAgree-txt.dark {
@@ -1495,11 +1510,13 @@ body.dark,
 .article-box.dark {
     border-color: #666;
 }
-.beltclose-btn.dark {
+.beltclose-btn.dark,
+.header-border.dark .beltclose-btn {
     background-image: url("../images/pc/icon/ic_close_black_24.png");
     background-size: contain;
 }
-.topsearch-btn.dark {
+.topsearch-btn.dark,
+.header-border.dark .topsearch-btn { 
     border-color: #555;
     background-image: url("../images/pc/icon/ic_search_white_24-1.png");
 }
@@ -1508,7 +1525,7 @@ body.dark,
     width: 6px;
     height: 9px;
     background-position: 0 -1px;
-}
+} 
 .darkmodeBg.dark,
 .scroll-top.dark {
     border-color: #333;
@@ -1530,57 +1547,73 @@ body.dark,
 .header-border.dark {
     border-bottom-color: #3d3d3d;
 }
-.header_logo.dark {
+.header_logo.dark,
+.header-border.dark .header_logo { 
     background-image: url("../images/mobile/logo/SA_logo_white.svg");
     background-size: contain;
 }
-.m-top-search.dark {
+.m-top-search.dark,
+.header-border.dark .m-top-search { 
     background-image: url("../images/mobile/icon/ic_search_white_24-1.svg");
 }
-.common_checkbox.dark[type="checkbox"]+label:before {
+.common_checkbox.dark[type="checkbox"]+label:before,
+.header-border.dark .common_checkbox[type="checkbox"]+label:before { 
     background: url("../images/pc/icon/ic_check_gray_inactive.svg") no-repeat 0 0;
     background-size: contain;
 }
-.common_checkbox.dark[type="checkbox"]:checked+label:before {
+.common_checkbox.dark[type="checkbox"]:checked+label:before,
+.header-border.dark .common_checkbox[type="checkbox"]:checked+label:before { 
     background: url("../images/pc/icon/ic_check_gray_active.svg") no-repeat 0 0;
     background-size: contain;
 }
-.m-gnbmenu.dark {
+.m-gnbmenu.dark,
+.header-border.dark .m-gnbmenu { 
     background-image: url("../images/mobile/icon/ic_hamburger_menu_dark_white_20.svg");
 }
 .terms-checktxt.dark {
     color: #ccc;
 }
-.utility-tab.dark>a.dark:after {
+.utility-tab.dark>a.dark:after,
+.header-border.dark .utility-tab>a:after {
     background-image: url("../images/pc/icon/ic_chevron_down_white_16.svg");
 }
 .bubble-box01.dark,
-.bubble-box02.dark{
+.bubble-box02.dark,
+.header-border.dark .bubble-box01,
+.header-border.dark .bubble-box02 {
     background-color: #2e2e2e;
 }
 .bubble-box01.dark>li.dark:hover,
-.bubble-box02.dark>li.dark:hover{
+.bubble-box02.dark>li.dark:hover,
+.header-border.dark .bubble-box01>li:hover,
+.header-border.dark .bubble-box02>li:hover { 
     background-color: #444;
     color: #fff;
 }
-.topsearch>input.dark {
+.topsearch>input.dark,
+.header-border.dark .topsearch>input { 
     border-color: #555;
 }
-.bubble-box.dark>li.dark>a.dark:hover {
+.bubble-box.dark>li.dark>a.dark:hover,
+.header-border.dark .bubble-box>li>a:hover{     
     background-color: #444;
     color: #fff;
 }
-.search-bubble-box.dark {
+.search-bubble-box.dark,
+.header-border.dark .search-bubble-box {
     background-color: #2e2e2e;
     border-color: #555;
 }
 .recent-keyword.dark,
-.recommend-search-part.dark>.recommend-keyword {
+.recommend-search-part.dark>.recommend-keyword,
+.header-border.dark .recent-keyword,
+.header-border.dark .recommend-search-part>.recommend-keyword {  
     background-color: #444;
     border-color: #444;
     color: #ccc;
 }
-.keyword-del.dark {
+.keyword-del.dark,
+.header-border.dark .keyword-del {
     background-image: url("../images/pc/icon/x-btn-lightgray.svg");
 }
 .swiper-button-prev.platformBtn-left.dark,
@@ -1598,9 +1631,9 @@ body.dark,
 .platform-pagination>span.dark {
     background: #555;
 }
-.terms-checktxt-line.dark {
+.terms-checktxt-line.dark { 
     border-bottom-color: #fff;
-}
+} 
 
 
 /* 외주 css select container */
@@ -2402,7 +2435,14 @@ body.dark,
     .visual-pagaination.dark>span.swiper-pagination-bullet-active.dark { 
         background:#fff;
     }
-
+    #subscript_check.dark[type="checkbox"]+label::before {
+        background: url("../images/pc/icon/ic_check_gray_inactive.svg") no-repeat 0 0;  
+        background-size: contain; 
+    }
+    #subscript_check.dark[type="checkbox"]:checked+label:before {
+        background: url("../images/pc/icon/ic_check_gray_active.svg") no-repeat 0 0; 
+        background-size: contain; 
+    }
     /*!* 외주 소스 임시 수정 1023 *! */
     /*.trp.popupfixed-wrap.images-popup .popup-align .pop-body {*/
     /*     height: calc(100% - 40px) !important;*/

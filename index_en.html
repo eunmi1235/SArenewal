@@ -111,7 +111,7 @@
             <section class="container wrap_padding"> 
                 <section class="auction-contents">  
                     <div class="auction-tit">
-                        <h1 class="main-sectiontit">Auction</h1>
+                        <h1 class="main-sectiontit main-sectiontit-auction">Auction</h1>
                         <div class="auctiontab-scroll">   
                             <div class="auctionTab"> <!-- 최대 5개 까지 --> 
                                 <span id="auctionTab" class="auctionTab-btn on"><span class="text-over">1st ART SHOPPING _ Modern and Contemporary Art Auction</span></span>
@@ -1364,8 +1364,8 @@
                             <fieldset class="newsletter-checkbox"> 
                                 <input type="checkbox" id="subscript_check" class="common_checkbox" value='subscript_check' name='subscript_check'> 
                                 <label for="subscript_check">
-                                    <span class="terms-checktxt">I agree to the collection and use of personal information.</span> 
-                                </label>  
+                                    <span class="terms-checktxt"><span class="terms-checktxt-line">I agree to the collection and use</span> of personal information.</span> 
+                                </label> 
                             </fieldset>   
                         </form>
                         <div class="flex_wrap newsletter-btnbox">
@@ -1464,7 +1464,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
     <!--[if lt IE 9]> <script src="/js/plugin/html5shiv.js"></script> <![endif]-->
     <script src="js/plugin/prefixfree.min.js"></script>    
-    <script src="js/plugin/swiper.min.js" type="text/javascript"></script> 
+    <script src="js/plugin/swiper.min.js" type="text/javascript"></script>
     
     <!-- header, footer -->
     <script>
@@ -1473,6 +1473,30 @@
             $("#Footer").load("html/include/en/footer.html"); 
         }); 
     </script>
-    
+
+    <script type="text/javascript"> 
+        /* 다크모드 새로고침 시 */
+        window.addEventListener('DOMContentLoaded', () => {
+            // console.log("theme ", localStorage.getItem('theme'));
+
+            $('*').toggleClass(localStorage.getItem('theme')); 
+
+            $('.auctionTab-btn').click(function () {
+                const darkIngTab = $(this).index();
+                $('.auctionTab-btn').removeClass('dark');
+                $('.auctionTab-contents').removeClass('dark');
+
+                $(this).addClass('dark');
+                $(".auctionTab-contents").eq(darkIngTab).addClass('dark');
+            });
+
+            $('.darktxt').text('다크모드로 보기');
+            $('.darktxt.dark').text('라이트모드로 보기');
+            $('.darktxt-en').text('Dark Mode');
+            $('.darktxt-en.dark').text('Ligth Mode');
+
+            $('.mode-toggle>input').addClass(localStorage.getItem('theme'));
+        });       
+    </script> 
 </body>
 </html>

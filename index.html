@@ -111,7 +111,7 @@
             <section class="container wrap_padding"> 
                 <section class="auction-contents">  
                     <div class="auction-tit">
-                        <h1 class="main-sectiontit main-sectiontit-auction">Auction</h1>
+                        <h1 class="main-sectiontit main-sectiontit-auction">Auction</h1> 
                         <div class="auctiontab-scroll">
                             <div class="auctionTab"> <!-- 최대 5개 까지 --> 
                                 <span id="auctionTab" class="auctionTab-btn on"><span class="text-over">제1회 ART SHOPPING 신세계 센텀시티 오픈 기념 경매</span></span>
@@ -1294,7 +1294,7 @@
                 <section class="flex_wrap sale-contents"> 
                     <figure class="sale-box">
                         <img src="images/pc/banner/PC_buy.png" alt="buy img" class="pc-ver">  
-                        <img src="images/pc/banner/M_buy.png" alt="buy img" class="m-ver">    
+                        <img src="images/mobile/banner/M_buy.png" alt="buy img" class="m-ver">     
                         <figcaption class="sale-boxinfo">   
                             <h2 class="main-sectiontit sale-tit">Buy</h2>
                             <p>회원가입부터 응찰까지<br>
@@ -1466,8 +1466,8 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
     <!--[if lt IE 9]> <script src="/js/plugin/html5shiv.js"></script> <![endif]-->
     <script src="js/plugin/prefixfree.min.js"></script>    
-    <script src="js/plugin/swiper.min.js" type="text/javascript"></script>   
-     
+    <script src="js/plugin/swiper.min.js" type="text/javascript"></script> 
+
     <!-- header, footer --> 
     <script>
         $(function(){
@@ -1475,5 +1475,30 @@
             $("#Footer").load("html/include/ko/footer.html");  
         }); 
     </script>  
+
+    <script type="text/javascript"> 
+        /* 다크모드 새로고침 시 */
+        window.addEventListener('DOMContentLoaded', () => {
+            // console.log("theme ", localStorage.getItem('theme'));
+
+            $('*').toggleClass(localStorage.getItem('theme')); 
+
+            $('.auctionTab-btn').click(function () {
+                const darkIngTab = $(this).index();
+                $('.auctionTab-btn').removeClass('dark');
+                $('.auctionTab-contents').removeClass('dark');
+
+                $(this).addClass('dark');
+                $(".auctionTab-contents").eq(darkIngTab).addClass('dark');
+            });
+
+            $('.darktxt').text('다크모드로 보기');
+            $('.darktxt.dark').text('라이트모드로 보기');
+            $('.darktxt-en').text('Dark Mode');
+            $('.darktxt-en.dark').text('Ligth Mode');
+
+            $('.mode-toggle>input').addClass(localStorage.getItem('theme')); 
+        });     
+    </script>
 </body>
 </html>
