@@ -137,21 +137,23 @@ $(function(){
             localStorage.setItem('theme', 'dark');
         } 
     }); 
-    /* mobile 다크모드 */  
-    $('.modebox').click(function () {
-        if ($('.mode-toggle>input').is(":checked")) {
-            $('*').addClass('dark');
-        } else {
-            $('*').removeClass('dark'); 
-        }
 
-        const theme = localStorage.getItem('theme');
-        if (theme) {
-            localStorage.removeItem('theme');
-        } else {
-            localStorage.setItem('theme', 'dark');
-        }
-    });
+    // /* mobile 다크모드 */    
+    // $('.modebox').click(function () {
+    //     if ($('.mode-toggle>input').is(":checked")) {
+    //         $('*').addClass('dark');
+    //     } else {
+    //         $('*').removeClass('dark'); 
+    //     }
+
+    //     const theme = localStorage.getItem('theme');
+    //     if (theme) {
+    //         localStorage.removeItem('theme');
+    //     } else {
+    //         localStorage.setItem('theme', 'dark');
+    //     }
+    // }); 
+
     /* 다크모드 버튼 hover */
     $('.darkmodeBg').hover(function () {
         $('.darkmode').toggleClass('active');

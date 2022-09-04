@@ -118,99 +118,13 @@ $(function(){
         };
         $('.header_beltbox').toggleClass('on');  
 
-    };// 종료구문 
+    };  
     
-    /* utility menu */
-    $('.utility-join').hide();
-    $('.utility-login').hide();  
-    $('.gnb_join').hide(); 
-    $('.gnb_login').hide(); 
-    $('.utility-icon').hide(); 
-    
-    $('.utility-icon.on').show();
-    
-    /* 모바일 gnb 유틸리티 */
-    $('.gnb_logout').click(function(){
-        $('.gnb_join').show();  
-        $('.gnb_member').hide(); 
-        $('.gnb_login').show();  
-        $(this).hide(); 
-    }); 
-    
-    /*pc 유틸리티 */
-    $('.utility-logout').click(function(){
-        $('.utility-join').show(); 
-        $('.utility-account').hide(); 
-        $('.utility-login').show(); 
-        $(this).hide(); 
-    }); 
-    
-    let utilityMenu = $(this).index();
-    $('.utility-tab').mouseenter(function(){ 
-        $(this).children('a').addClass('on'); /* 화살표 회전 */
-        $('.bubble-box').removeClass('on'); 
-        $(this).children('.bubble-box').eq(utilityMenu).addClass('on'); 
-    });  
-    
-    $('.bubble-box').mouseleave(function(){ 
-        $(this).removeClass('on');
-        $('.utility-lang>a').removeClass('on');  
-    });  
-    $('.utility-tab').mouseleave(function(){ 
-        $(this).children('a').removeClass('on');  
-        $('.bubble-box').removeClass('on');
-    });  
-    
-    /* top search 유틸리티 겹침X */     
-    // $('.topsearch-text').click(function(){
-    //     if($('.search-bubble-box').hasClass('on')){   
-    //         $('.bubble-box01').eq(utilityMenu).removeClass('hide');
-    //         $('.bubble-box02').eq(utilityMenu).removeClass('hide');
-    //         $('.search-bubble-box').addClass('on');
-    //     } else { /* 검색기능 보여질 때 겹침X */  
-    //         $('.bubble-box01').addClass('hide');
-    //         $('.bubble-box02').addClass('hide');
-    //         $('.search-bubble-box').removeClass('on');
-    //         $('.main-contents, #contents').click(function(){
-    //             $('.search-bubble-box').removeClass('on');
-    //             $('.bubble-box01').eq(utilityMenu).removeClass('hide');
-    //             $('.bubble-box02').eq(utilityMenu).removeClass('hide');
-    //         }); 
-    //     }  
-    //     $('.search-bubble-box').toggleClass('on');   
-    // });   
-    /* 최근검색 키워드 삭제 */ 
-    $('.keyword-del').click(function(){     
-        $(this).parent('.recent-keyword').hide();
-    }); 
-    /* 최근검색 전체삭제 */
-    $('.keyword-all-del').click(function(){  
-        $('.recent-keyword').hide();  
-    }); 
-    
-    /* 모바일 gnb 서치*/
-    $('.m-top-search').click(function(){
-        $('.topsearch-box>form').animate({'right':'0','transition':'ease .5s'});    
-        $('body').css({'overflow':'hidden'}); 
-        //$('.topsearch-box>form').show(); 
-        $('.topsearch>input').show(); 
-        $('.topsearch-btn').show();  
-        $('.search-bubble-box').addClass('on');  
-    });
-    $('.top-search-closeBtn').click(function(){
-        $('.topsearch-box>form').animate({'right':'-100%','transition':'ease .5s'});    
-        $('body').css({'overflow':'visible'});  
-    });  
-    
-    /*top search placeholder */   
-    $('.topsearch>input').attr('placeholder', '작가,작품명 검색'); /* placeholder 초기값 */
-    $('.topsearch-en>input').attr('placeholder', 'Artists, Works');   
-
     /* scroll top */
     $('.scroll-top').click(function(){ 
         $('html, body').animate({scrollTop: '0'}, 700);
     });   
-});   
+}); 
 
 /* footer family site */ 
 $('.Familysite-selectbox').click(function(){ 
@@ -256,6 +170,29 @@ function searchFilter() {
         $('.search-bubble-box').toggleClass('on'); 
     } 
 }    
+
+/* 다크모드 새로고침 시 */
+window.addEventListener('DOMContentLoaded', () => {
+    // console.log("theme ", localStorage.getItem('theme'));
+
+    $('*').toggleClass(localStorage.getItem('theme')); 
+
+    $('.auctionTab-btn').click(function () {
+        const darkIngTab = $(this).index();
+        $('.auctionTab-btn').removeClass('dark');
+        $('.auctionTab-contents').removeClass('dark');
+
+        $(this).addClass('dark');
+        $(".auctionTab-contents").eq(darkIngTab).addClass('dark');
+    });
+
+    $('.darktxt').text('다크모드로 보기');
+    $('.darktxt.dark').text('라이트모드로 보기');
+    $('.darktxt-en').text('Dark Mode');
+    $('.darktxt-en.dark').text('Ligth Mode');
+
+    $('.mode-toggle>input').addClass(localStorage.getItem('theme')); 
+});   
 
 
 
