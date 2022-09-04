@@ -497,10 +497,10 @@ img::selection {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    background: url("/images/pc/icon/ic_moon_gray.svg") no-repeat center -2px;
+    background: url("../images/pc/icon/ic_moon_gray.svg") no-repeat center -2px;
 }
 .darkmode.active {
-    background-image: url("/images/pc/icon/ic_moon_mint.svg");
+    background-image: url("../images/pc/icon/ic_moon_mint.svg");
 }
 .darktxt {
     font-size: 15px;
@@ -523,7 +523,7 @@ img::selection {
     opacity: 1;
 }
 .topBtn {
-    background: url("/images/pc/icon/top.png") no-repeat center center;
+    background: url("../images/pc/icon/top.png") no-repeat center center;
     width: 12px;
     height: 18px;
     padding: 34px 26px 19px 27px;
@@ -563,16 +563,16 @@ img::selection {
     border: 1px solid #bdbdbd;
 }
 .closebtn {
-    background: url("/images/pc/icon/ic_close_black_24.svg") no-repeat 0 0;
+    background: url("../images/pc/icon/ic_close_black_24.svg") no-repeat 0 0;
 }
 .closebtn-b {
-    background-image: url("/images/pc/icon/ic_close_black_24.svg");
+    background-image: url("../images/pc/icon/ic_close_black_24.svg");
 }
 .closebtn-g {
-    background-image: url("/images/pc/icon/ic_close_gray_24.svg");
+    background-image: url("../images/pc/icon/ic_close_gray_24.svg");
 }
 .closebtn-w {
-    background-image: url("/images/pc/icon/ic_close_white_24.svg");
+    background-image: url("../images/pc/icon/ic_close_white_24.svg");
 }
 .btn-bg-w{
     background-color: #fff;
@@ -641,14 +641,14 @@ img::selection {
     position: absolute;
     left: 0;
     top: 0;
-    background: url("/images/pc/icon/check01.png") no-repeat -11px -30px;
+    background: url("../images/pc/icon/check01.png") no-repeat -11px -30px;
 }
 .common_checkbox[type="checkbox"]:checked+label:before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    background: url("/images/pc/icon/check01.png") no-repeat -51px -30px;
+    background: url("../images/pc/icon/check01.png") no-repeat -51px -30px;
 }
 .visual_btn {
     display: flex;
@@ -729,7 +729,7 @@ img::selection {
 }
 .beltbanner-triangle {
     vertical-align: middle;
-    background: url("/images/pc/icon/arrow01.png") no-repeat center center;
+    background: url("../images/pc/icon/arrow01.png") no-repeat center center;
     width: 6px;
     height: 8px;
     margin-left: 14px;
@@ -779,7 +779,7 @@ img::selection {
     width: 10px;
     height: 10px;
     display: inline-block;
-    background: url("/images/pc/icon/ic_chevron_down_gray_16.svg") no-repeat center center;
+    background: url("../images/pc/icon/ic_chevron_down_gray_16.svg") no-repeat center center;
     background-size: contain;
     margin-left: 7px;
     vertical-align: top;
@@ -832,7 +832,7 @@ img::selection {
 .utility-icon {
     width: 14px;
     height: 14px;
-    background: url("/images/pc/icon/ic_new_14.png") no-repeat center center;
+    background: url("../images/pc/icon/ic_new_14.png") no-repeat center center;
     display: inline-block;
     vertical-align: middle;
     margin-left: 5px;
@@ -925,7 +925,7 @@ recent-keyword:lang(en) {
 .keyword-del {
     width: 11px;
     height: 11px;
-    background: url("/images/pc/icon/ic_close_gray_24.svg") no-repeat center center;
+    background: url("../images/pc/icon/ic_close_gray_24.svg") no-repeat center center;
     background-size: contain;
     margin-left: 5px;
     cursor: pointer;
@@ -948,7 +948,7 @@ recent-keyword:lang(en) {
     flex-basis: 211px;
     width: 211px;
     height: 34px;
-    background:url("/images/pc/logo/SA_logo_black.svg") no-repeat center center;
+    background:url("../images/pc/logo/SA_logo_black.svg") no-repeat center center;
     background-size: contain;
     text-align: center;
     line-height: 34px;
@@ -1067,7 +1067,7 @@ recent-keyword:lang(en) {
     right: 20px;
     width: 9px;
     height: 12px;
-    background: url("/images/pc/icon/arrow.png") no-repeat center center;
+    background: url("../images/pc/icon/arrow.png") no-repeat center center;
     transform: translate(0, -50%);
     transform: -webkit-translate(0, -50%);
     transform: -ms-translate(0, -50%);
@@ -1158,7 +1158,7 @@ recent-keyword:lang(en) {
     width: 38px;
     height: 46px;
     border: 1px solid #c1c1c1;
-    background: url("/images/pc/icon/ic_search_black_24.svg") no-repeat center center / 21px 21px;
+    background: url("../images/pc/icon/ic_search_black_24.svg") no-repeat center center / 21px 21px;
     cursor: pointer;
     padding: 0;
     border-left-color: transparent;
@@ -1173,7 +1173,7 @@ recent-keyword:lang(en) {
     height: 21px;
 }
 .platform {
-    background: url("/images/pc/icon/mode.png") no-repeat center center;
+    background: url("../images/pc/icon/mode.png") no-repeat center center;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
@@ -1249,22 +1249,22 @@ recent-keyword:lang(en) {
 .sns-icon {
     width: 43px;
     height: 43px;
-    background:url("/images/pc/icon/footer_sns_instar.png") no-repeat 0 0;
+    background:url("../images/pc/icon/footer_sns_instar.png") no-repeat 0 0;
 }
 .sns-icon01 {
-    background-image: url("/images/pc/icon/footer_sns_youtube.png");
+    background-image: url("../images/pc/icon/footer_sns_youtube.png");
 }
 .sns-icon02 {
-    background-image: url("/images/pc/icon/footer_sns_instar.png");
+    background-image: url("../images/pc/icon/footer_sns_instar.png");
 }
 .sns-icon03 {
-    background-image: url("/images/pc/icon/footer_sns_facebook.png");
+    background-image: url("../images/pc/icon/footer_sns_facebook.png");
 }
 .sns-icon04 {
-    background-image: url("/images/pc/icon/footer_sns_blog.png");
+    background-image: url("../images/pc/icon/footer_sns_blog.png");
 }
 .sns-icon05 {
-    background-image: url("/images/pc/icon/footer_sns_kakao.png");
+    background-image: url("../images/pc/icon/footer_sns_kakao.png");
 }
 .footer_infobox {
     flex-direction: column;
@@ -1327,7 +1327,7 @@ recent-keyword:lang(en) {
     display: inline-block;
     width: 13px;
     height: 7px;
-    background: url("/images/pc/icon/Family-Site_select-box_btn.png") no-repeat 0 0;
+    background: url("../images/pc/icon/Family-Site_select-box_btn.png") no-repeat 0 0;
     background-size: contain;
     position: absolute;
     top: 50%;
@@ -1436,10 +1436,10 @@ body.dark,
     color: #999;
 }
 .playBtn.dark {
-    background-image: url("/images/pc/icon/ic_main_banner_control_play_white_24.png");
+    background-image: url("../images/pc/icon/ic_main_banner_control_play_white_24.png");
 }
 .stopBtn.dark {
-    background-image: url("/images/pc/icon/ic_main_banner_control_pause_white_24.svg");
+    background-image: url("../images/pc/icon/ic_main_banner_control_pause_white_24.svg");
 }
 .btn-border-b.dark {
     border-color: #666;
@@ -1498,15 +1498,15 @@ body.dark,
     border-color: #666;
 }
 .beltclose-btn.dark {
-    background-image: url("/images/pc/icon/ic_close_black_24.png");
+    background-image: url("../images/pc/icon/ic_close_black_24.png");
     background-size: contain;
 }
 .topsearch-btn.dark {
     border-color: #555;
-    background-image: url("/images/pc/icon/ic_search_white_24-1.png");
+    background-image: url("../images/pc/icon/ic_search_white_24-1.png");
 }
 .beltbanner-triangle.dark {
-    background-image: url("/images/pc/icon/notice_black_arrow.png");
+    background-image: url("../images/pc/icon/notice_black_arrow.png");
     width: 6px;
     height: 9px;
     background-position: 0 -1px;
@@ -1517,13 +1517,13 @@ body.dark,
     background-color: #333;
 }
 .darkmode.dark {
-    background-image: url("/images/pc/icon/ic_sun_white.svg");
+    background-image: url("../images/pc/icon/ic_sun_white.svg");
 }
 .darkmode.dark.active {
-    background-image: url("/images/pc/icon/ic_sun_mint.svg");
+    background-image: url("../images/pc/icon/ic_sun_mint.svg");
 }
 .topBtn.dark {
-    background-image: url("/images/pc/icon/ic_arrow_up_white_24.svg");
+    background-image: url("../images/pc/icon/ic_arrow_up_white_24.svg");
 }
 .darkmodeBg.dark:hover {
     background-color: #555;
@@ -1533,28 +1533,28 @@ body.dark,
     border-bottom-color: #3d3d3d;
 }
 .header_logo.dark {
-    background-image: url("/images/mobile/logo/SA_logo_white.svg");
+    background-image: url("../images/mobile/logo/SA_logo_white.svg");
     background-size: contain;
 }
 .m-top-search.dark {
-    background-image: url("/images/mobile/icon/ic_search_white_24-1.svg");
+    background-image: url("../images/mobile/icon/ic_search_white_24-1.svg");
 }
 .common_checkbox.dark[type="checkbox"]+label:before {
-    background: url("/images/pc/icon/ic_check_gray_inactive.svg") no-repeat 0 0;
+    background: url("../images/pc/icon/ic_check_gray_inactive.svg") no-repeat 0 0;
     background-size: contain;
 }
 .common_checkbox.dark[type="checkbox"]:checked+label:before {
-    background: url("/images/pc/icon/ic_check_gray_active.svg") no-repeat 0 0;
+    background: url("../images/pc/icon/ic_check_gray_active.svg") no-repeat 0 0;
     background-size: contain;
 }
 .m-gnbmenu.dark {
-    background-image: url("/images/mobile/icon/ic_hamburger_menu_dark_white_20.svg");
+    background-image: url("../images/mobile/icon/ic_hamburger_menu_dark_white_20.svg");
 }
 .terms-checktxt.dark {
     color: #ccc;
 }
 .utility-tab.dark>a.dark:after {
-    background-image: url("/images/pc/icon/ic_chevron_down_white_16.svg");
+    background-image: url("../images/pc/icon/ic_chevron_down_white_16.svg");
 }
 .bubble-box01.dark,
 .bubble-box02.dark{
@@ -1583,17 +1583,17 @@ body.dark,
     color: #ccc;
 }
 .keyword-del.dark {
-    background-image: url("/images/pc/icon/x-btn-lightgray.svg");
+    background-image: url("../images/pc/icon/x-btn-lightgray.svg");
 }
 .swiper-button-prev.platformBtn-left.dark,
 .swiper-button-next.platformBtn-right.dark {
     background-size: 33px auto;
 }
 .swiper-button-prev.platformBtn-left.dark {
-    background-image: url("/images/pc/icon/ic_chevron_left_white_48.svg");
+    background-image: url("../images/pc/icon/ic_chevron_left_white_48.svg");
 }
 .swiper-button-next.platformBtn-right.dark {
-    background-image: url("/images/pc/icon/ic_chevron_right_white_48.svg");
+    background-image: url("../images/pc/icon/ic_chevron_right_white_48.svg");
     fill: none;
 }
 .swiper-progressbar.dark .visual-progressbar.dark,
@@ -1744,7 +1744,7 @@ body.dark,
         flex-basis: 150px;
     }
     .search-btn { /* top search */
-        background-image: url("/images/pc/icon/search.png");
+        background-image: url("../images/pc/icon/search.png");
     }
     .submenuBg-box {
         justify-content: center;
@@ -1832,7 +1832,7 @@ body.dark,
         max-width: 290px; 
     }
     .beltbanner-triangle {
-        background-image: url("/images/mobile/icon/arrow01.png");
+        background-image: url("../images/mobile/icon/arrow01.png");
         background-position: center;
         width: 7px;
         height: 10px;
@@ -1840,11 +1840,11 @@ body.dark,
     .beltclose-btn {
         width: 20px;
         height: 20px;
-        background-image: url("/images/mobile/icon/notice_close.png");
+        background-image: url("../images/mobile/icon/notice_close.png");
         right: 25px;
     }
     .header_logo {
-        background-image: url("/images/mobile/logo/SA_logo_black.svg");
+        background-image: url("../images/mobile/logo/SA_logo_black.svg");
         flex-basis: 140px;
         width: 140px;
         height: 55px;
@@ -1861,13 +1861,13 @@ body.dark,
         margin-right: 15px;
         width: 24px;
         height: 24px;
-        background: url("/images/mobile/icon/ic_search_black_24.svg") no-repeat center center;
+        background: url("../images/mobile/icon/ic_search_black_24.svg") no-repeat center center;
         background-size: contain;
     }
     .m-gnbmenu {
         width: 22.5px;
         height: 22.5px;
-        background: url("/images/mobile/icon/ic_hamburger_menu_light_black_20.svg") no-repeat center center;
+        background: url("../images/mobile/icon/ic_hamburger_menu_light_black_20.svg") no-repeat center center;
         background-size: contain;
     }
     .search-bubble-box {
@@ -1987,7 +1987,7 @@ body.dark,
         display: inline-block;
         width: 10px;
         height: 10px;
-        background: url("/images/mobile/icon/gnbmenu_arrow.png") no-repeat center center;
+        background: url("../images/mobile/icon/gnbmenu_arrow.png") no-repeat center center;
         background-size: contain;
         position: absolute;
         right: 0;
@@ -2315,23 +2315,23 @@ body.dark,
     .sns-icon {
         width: 35px;
         height: 35px;
-        background-image:url("/images/mobile/icon/footer_sns_instar.png");
+        background-image:url("../images/mobile/icon/footer_sns_instar.png");
         background-size: contain;
     }
     .sns-icon01 {
-        background-image: url("/images/mobile/icon/footer_sns_youtube.png");
+        background-image: url("../images/mobile/icon/footer_sns_youtube.png");
     }
     .sns-icon02 {
-        background-image: url("/images/mobile/icon/footer_sns_instar.png");
+        background-image: url("../images/mobile/icon/footer_sns_instar.png");
     }
     .sns-icon03 {
-        background-image: url("/images/mobile/icon/footer_sns_facebook.png");
+        background-image: url("../images/mobile/icon/footer_sns_facebook.png");
     }
     .sns-icon04 {
-        background-image: url("/images/mobile/icon/footer_sns_blog.png");
+        background-image: url("../images/mobile/icon/footer_sns_blog.png");
     }
     .sns-icon05 {
-        background-image: url("/images/mobile/icon/footer_sns_kakao.png");
+        background-image: url("../images/mobile/icon/footer_sns_kakao.png");
     }
     .footer_menubox {
         padding-bottom: 35px;
@@ -2376,7 +2376,7 @@ body.dark,
         color: #333;
     }
     .topsearch-btn.dark {
-        background-image: url("/images/pc/icon/ic_search_black_24.svg");
+        background-image: url("../images/pc/icon/ic_search_black_24.svg");
     }
     .search-bubble-box.dark {
         background-color: transparent;
@@ -2396,13 +2396,21 @@ body.dark,
         color: #333;
     }
     .keyword-del.dark {
-        background-image: url("/images/pc/icon/ic_close_gray_24.svg");
+        background-image: url("../images/pc/icon/ic_close_gray_24.svg"); 
     }
     .visual-pagaination.dark>span.dark {
         background-color: #555;
     }
     .visual-pagaination.dark>span.swiper-pagination-bullet-active.dark { 
         background:#fff;
+    }
+    #subscript_check.dark[type="checkbox"]+label:before {
+        background: url("../images/pc/icon/ic_check_gray_inactive.svg") no-repeat 0 0;  
+        background-size: contain; 
+    }
+    #subscript_check.dark[type="checkbox"]:checked+label:before {
+        background: url("../images/pc/icon/ic_check_gray_active.svg") no-repeat 0 0;
+        background-size: contain; 
     }
 
     /*!* 외주 소스 임시 수정 1023 *! */
