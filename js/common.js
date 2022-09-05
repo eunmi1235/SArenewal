@@ -836,3 +836,8 @@ $('.proceeding-btn').on('click', function(){
     $(this).addClass('active');   
     $(".proceeding-list").eq(proceedingTabBtn).addClass('on');   
 }); 
+
+/* 뒤로가기 */  
+$(".js-history_back").click(function() {
+    window.history.back();
+}); 
