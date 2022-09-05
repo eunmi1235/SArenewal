@@ -235,21 +235,19 @@ $(function(){
     $('.topsearch-en>input').attr('placeholder', 'Artists, Works');   
     
     /* footer family site */
-    $('.Familysite-selectbox').click(function(){ 
-//        let familyH = $(this).index();  
-//        $('.innerfooter').removeClass('on'); 
-//        $(this).removeClass('on'); 
-//        $('.innerfooter').eq(familyH).addClass('on'); 
-//        $('.Familysite').eq(familyH).addClass('on');
-        
+    $('.Familysite-selectbox').click(function(){         
         if($('.familyselect').hasClass('on')){ /* familyselet 탭 닫기 */       
+            console.log(56565465);
             $('.familyselect').addClass('on'); 
-            $('.Familysite').removeClass('on'); /* 화살표 */   
+            $('.Familysite').removeClass('on'); /* 화살표 */    
         } else {   
+            console.log(6767657); 
+            $('.Familysite').addClass('on');  
             $('.innerfooter').click(function(){
                 $('.familyselect').removeClass('on'); 
                 $('.familyselect').click(false); 
                 $('.Familysite-selectbox').click(false);   
+                $('.Familysite').removeClass('on'); 
             }); 
             $('.familyselect').removeClass('on'); /* familyselet 탭 오픈 */      
         }; 
