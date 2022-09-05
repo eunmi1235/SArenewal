@@ -1049,6 +1049,9 @@ recent-keyword:lang(en) {
     font-size: 20px;
     font-weight: 600;
 }
+.Ingbanner-txt:lang(en)>p {
+    height: 23px;
+}
 .Ingkind-auction {
     width: auto;
     height: 18px;
@@ -1777,7 +1780,7 @@ body.dark,
         height: 43px;
     }
     .header_beltTit>a:first-child>.belt_tit {
-        margin-top: 17px;
+        margin-top: 15px; 
     }
     .header_nav,
     .wrap_padding,

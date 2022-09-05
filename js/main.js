@@ -59,17 +59,16 @@ $(function(){
     
     // 상단텍스트공지 
     const beltNoticeSwiper = new Swiper(".belt-swiper", {
+        initialSlide : 1,
         autoplay: {
             delay: 4000,
         },
-        initialSlide : 1,
         allowTouchMove:false, /* 마우스 및 손가락 터치 시 슬라이드 이동 가능여부 */
         touchMoveStopPropagation: true,   /* touchmove 중지 */
         direction:'vertical',
         loop: true,
-    });  
- 
-    
+    });   
+
     /*Auction*/ 
     /*auction Tab 버튼*/ 
     $('.auctionTab-btn').click(function(){ 
@@ -139,6 +138,7 @@ $(function(){
             el: '.platform-pagination',
             type: 'bullets',
             clickable: true,
+            clickableClass:'.platform-pagination',
         },
         navigation: {
             nextEl: '.platformBtn-right',
@@ -526,6 +526,7 @@ $(window).resize(function(){
         pagination: {
             el: '.platform-pagination',
             clickable: true,
+            clickableClass:'.platform-pagination', 
         },
         navigation: {
             nextEl: '.platformBtn-right',
