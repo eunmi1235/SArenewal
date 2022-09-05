@@ -57,9 +57,9 @@ $(function(){
     });
     
     
-    // 상단텍스트공지 
+    // 상단텍스트공지   
     const beltNoticeSwiper = new Swiper(".belt-swiper", {
-        initialSlide : 1,
+        initialSlide : 0,
         autoplay: {
             delay: 4000,
         },

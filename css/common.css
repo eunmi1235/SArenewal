@@ -1635,6 +1635,13 @@ body.dark,
     max-height: 331px !important;
     /*max-height: calc(100vh - 234px);*/
 }
+.proceeding-list { 
+    display: none;
+}  
+.proceeding-list.on {
+    display: block; 
+}
+
 
 /* pc */ 
     @media all and (max-width: 1919px) {
