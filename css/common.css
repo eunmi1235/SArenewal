@@ -129,10 +129,7 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    letter-spacing: -0.4px;
-
-    /* 터치 시 확대,축소 방지  */
-    touch-action: pan-x pan-y;
+    letter-spacing: -0.4px; 
 }
 /*scroll style */
 body::-webkit-scrollbar,
@@ -1113,7 +1110,7 @@ recent-keyword:lang(en) {
     background-color: #f23f3f;
     width: 37px;
     height: 18px;
-    padding-top: 4px;
+    padding-top: 3px; 
     text-align: center;
     vertical-align: top;
     margin-left: 10px;
@@ -1906,7 +1903,8 @@ body.dark,
         left: 0;
         right: 0;
         width: 100%;
-        height: 100vh;
+        height: 100vh; 
+        height: calc(var(--vh, 1vh)*100); 
         background-color: rgba(0,0,0,.5);
         backdrop-filter:blur(10px);
         z-index: 3;
@@ -1917,13 +1915,17 @@ body.dark,
         top: 0px;
         right: -100%;
         left: auto;
-        height: 100vh;
+        height: 100vh; 
+        height: calc(var(--vh, 1vh)*100);
         max-width: 570px;
         padding: 0;
         overflow-y: auto;
         z-index: 25;
     }
-    .gnb_blackBg {
+    .submenuBg .wrap {
+        padding-top: 20px; 
+    }
+    .gnb_blackBg { 
         display: none;
     }
     .subGnbmenu {
@@ -1940,7 +1942,7 @@ body.dark,
         background-size: cover;
         display: block;
         cursor: pointer;
-        margin-top: 20px;
+        /* margin-top: 20px; */ 
         margin-left: auto;
         margin-right: 25px;
     }
@@ -2154,7 +2156,7 @@ body.dark,
         flex-basis: inherit;
         position: fixed;
         width: 100%;
-        height: 100vh;
+        height: calc(var(--vh, 1vh)*100);
         padding: 40px 45px;
         top:0;
         right: -100%;

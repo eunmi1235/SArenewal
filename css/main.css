@@ -959,10 +959,12 @@
     box-shadow: 0px 5px 15px -3px rgba(0,0,0,0.4);
     animation: overlay .5s linear;
     z-index: 26;
+    opacity: 1;
 }
 .main-popupbox.down {
     bottom: -100%;
     animation: overlaydown .5s linear;
+    opacity: 0; 
 }
 .main-popup-img,
 .main-popup-txt {
@@ -1025,17 +1027,21 @@
     0% {
         right: 40px;
         bottom: -100%;
+        opacity: 0;
     }
     100% {
         bottom: 30px;
+        opacity: 1;
     }
 }
 @keyframes overlaydown {
     from {
         bottom: 0;
+        opacity: 1; 
     }
     to {
         bottom: -100%;
+        opacity: 0;
     }
 }
 /* on 일때 보임 */
