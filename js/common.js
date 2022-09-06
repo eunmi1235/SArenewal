@@ -19,10 +19,7 @@ $(function(){
 
         /* 상단 notice swiper */ 
         if($('.header_beltbox').hasClass('on')){   
-            $(this).removeClass('on');    
-            $('.main-contents').css('margin-top','102px');  
-        } else {   
-            $(this).addClass('on');     
+            console.log(4366345);
             $('.main-contents').css('margin-top','162px'); 
             $('.beltclose-btn').click(function(){  
                 $('.header_beltbox').stop().slideUp(400, function(){
@@ -30,8 +27,12 @@ $(function(){
                 });
                 $('.main-contents').css('margin-top','102px');
             });
+        } else {   
+            $(this).removeClass('on');    
+            $('.main-contents').css('margin-top','102px');   
         };
-        $('.header_beltbox').toggleClass('on');
+        
+        
 
         /* top search 유틸리티 겹침X 및 클릭시 리스트 박스 tooggle */    
         $('.topsearch-text').off('click'); 
@@ -75,9 +76,10 @@ $(function(){
             
             $('.gnb_submenuBg').addClass('on');
             $('.submenuBg').addClass('on');
-            $('body').css({'overflow-y':'hidden'}); 
+            // $('body').css({'overflow-y':'hidden'}); 
             
             $('.submenuBg').animate({'right':'0','transition':'ease .2s','display':'block'}, function(){
+                // $(this).css('overflow','visible');  
                 $('.gnb_submenuBg').off('click');
                 $('.gnb_submenuBg').click(function () {
 
@@ -109,9 +111,8 @@ $(function(){
             }); 
         }); 
         
-        $('.submenuBg-closeBtn').off('click');
         $('.submenuBg-closeBtn').click(function(){   
-            $('body').css({'overflow': 'visible'});
+            // $('body').css({'overflow': 'visible'});
             $('.gnbmenu_arrow').removeClass('on');
             $('.submenuBg').animate({'right': '-100%', 'transition': 'ease .2s'}, function () {
                 $(this).removeClass('on');
@@ -119,12 +120,9 @@ $(function(){
             });  
         }); 
         
-        /* 상단 notice swiper */ 
-        if($('.header_beltbox').hasClass('on')){   
-            $(this).removeClass('on');    
-            $('.main-contents').css('margin-top','56px');  
-        } else {   
-            $(this).addClass('on');     
+         /* 상단 notice swiper */ 
+         if($('.header_beltbox').hasClass('on')){   
+            console.log(4366345);
             $('.main-contents').css('margin-top','100px');  
             $('.beltclose-btn').click(function(){  
                 $('.header_beltbox').stop().slideUp(400, function(){
@@ -132,8 +130,11 @@ $(function(){
                 });
                 $('.main-contents').css('margin-top','56px');
             });
+        } else {   
+            $(this).removeClass('on');    
+            $('.main-contents').css('margin-top','56px');    
         };
-        $('.header_beltbox').toggleClass('on');
+        
 
         /* top search 유틸리티 겹침X 및 클릭시 리스트 박스 tooggle */
         $('.topsearch-text').off('click'); 
@@ -248,6 +249,23 @@ $(function(){
 $('.scroll-top').click(function(){ 
     $('html, body').animate({scrollTop: '0'}, 700);
 });
+
+
+
+/* 브라우저별 상태표시줄 innerheight */ 
+// let vh = window.innerHeight * 0.01;  
+// document.documentElement.style.setProperty("--vh", "${vh}px"); 
+
+// window.addEventListener("resize", () =>{
+//     console.log("resize"); 
+//     let vh = window.innerHeight * 0.01; 
+//     document.documentElement.style.setProperty("--vh", "${vh}px"); 
+// });
+
+// window.addEventListener("touchend", ()=> {
+//     let vh = window.innerHeight * 0.01;
+//     document.documentElement.style.setProperty("--vh", "${vh}px"); 
+// });
 
 
 /* 공통 login 팝업 */  
@@ -623,19 +641,18 @@ $(window).resize(function(){
         
         /* 상단 notice swiper */ 
         if($('.header_beltbox').hasClass('on')){   
-            $(this).removeClass('on');    
-            $('.main-contents').css('margin-top','102px');  
-        } else {   
-            $(this).addClass('on');     
-            $('.main-contents').css('margin-top','162px');  
+            console.log(4366345);
+            $('.main-contents').css('margin-top','162px'); 
             $('.beltclose-btn').click(function(){  
                 $('.header_beltbox').stop().slideUp(400, function(){
                     $('.header_beltbox').removeClass('on');
                 });
                 $('.main-contents').css('margin-top','102px');
             });
+        } else {   
+            $(this).removeClass('on');    
+            $('.main-contents').css('margin-top','102px');   
         };
-        $('.header_beltbox').toggleClass('on');
         
         $('.header').show(function(){
             $('.main-header').show(function(){
@@ -704,7 +721,7 @@ $(window).resize(function(){
             
             $('.gnb_submenuBg').addClass('on');
             $('.submenuBg').addClass('on');
-            $('body').css({'overflow-y':'hidden'}); 
+            // $('body').css({'overflow-y':'hidden'}); 
             $('.submenuBg').css({'right':'-100%'});
             $('.submenuBg').show();
             
@@ -753,44 +770,28 @@ $(window).resize(function(){
             /* 모바일 topsearch */
             $('.m-top-search').click(function (){
                 $('.search-bubble-box').addClass('on');
-            }); 
-
-            /* 브라우저별 상태표시줄 innerheight */ 
-            let vh = window.innerHeight * 0.01; 
-            document.documentElement.style.setProperty("--vh", "${vh}px"); 
-
-            window.addEventListener("resize", () =>{
-                console.log("resize"); 
-                let vh = window.innerHeight * 0.01; 
-                document.documentElement.style.setProperty("--vh", "${vh}px"); 
-            });
-
-            window.addEventListener("touchend", ()=> {
-                let vh = window.innerHeight * 0.01;
-                document.documentElement.style.setProperty("--vh", "${vh}px"); 
-            });
+            });  
         });
         
-         /* 상단 notice swiper */ 
-         if($('.header_beltbox').hasClass('on')){   
-            $(this).removeClass('on');    
-            $('.main-contents').css('margin-top','56px');  
-        } else {   
-            $(this).addClass('on');     
-            $('.main-contents').css('margin-top','100px');  
+        /* 상단 notice swiper */ 
+        if($('.header_beltbox').hasClass('on')){   
+            console.log(4366345);
+            $('.main-contents').css('margin-top','100px'); 
             $('.beltclose-btn').click(function(){  
                 $('.header_beltbox').stop().slideUp(400, function(){
                     $('.header_beltbox').removeClass('on');
                 });
                 $('.main-contents').css('margin-top','56px');
             });
+        } else {   
+            $(this).removeClass('on');    
+            $('.main-contents').css('margin-top','56px'); 
         };
-        $('.header_beltbox').toggleClass('on'); 
+        
     
         /* 닫기 버튼 (gnb) */
-        $('.submenuBg-closeBtn').off('click');
-        $('.submenuBg-closeBtn').click(function(){
-            $('body').css({'overflow':'visible'});
+        $('.submenuBg-closeBtn').click(function(){ 
+            // $('body').css({'overflow':'visible'});
             $('.gnbmenu_arrow').removeClass('on');
             $('.submenuBg').animate({'right':'-100%','transition':'none'}, function(){
 
@@ -802,17 +803,7 @@ $(window).resize(function(){
             /* top search box 닫기 기능 */
             $('.topsearch-box>form').animate({'right': '-100%', 'transition': 'ease .1ms'});
             $('body').css({'overflow':'visible'});
-        });  
-        
-        /* 띠배너 beltbanner */
-        $('.header_beltbox.on').show(function(){
-            $('.main-contents').css('margin-top','100px');
-        });
-        $('.beltclose-btn').click(function(){
-            $('.main-contents').css('margin-top','56px');
-            $('.gnb_submenuBg').css('overflow','visible');
-            $('.header_beltbox').removeClass('on');
-        });
+        });   
 
         /* top search 유틸리티 겹침X 및 클릭시 리스트 박스 tooggle */    
         $('.topsearch-text').off('click'); 

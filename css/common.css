@@ -135,21 +135,21 @@ body {
 body::-webkit-scrollbar,
 .submenuBg::-webkit-scrollbar {
     /*display: none;*/
-    width: 10px;
+    width: 5px;
     height: 5px;
     -ms-overflow-style: none;
 }
 body::-webkit-scrollbar-thumb,
-.submenuBg::-webkit-scrollbar-thumb {
-    background-color: #f4f4f4;
-    border-radius: 10px;
+.submenuBg::-webkit-scrollbar-thumb { 
+    background-color: #bbb;  
+    border-radius: 5px;
 }
 .submenuBg::-webkit-scrollbar-thumb {
     background-color: rgba(225,225,225,0.5);
 }
 body::-webkit-scrollbar-track,
 .submenuBg::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: #f4f4f4;
 }
 blockquote, q {
     quotes: none;
@@ -1382,16 +1382,17 @@ recent-keyword:lang(en) {
 /* 다크모드 */
 body.dark::-webkit-scrollbar-thumb,
 .auctiontab-scroll.dark::-webkit-scrollbar-thumb {
-    background-color: #2b2b2b;
+    background-color: #555; 
     -webkit-border-radius: 10px;
     -ms-border-radius: 10px;
     -ms-overflow-style: none;
 }
-body.dark::-webkit-scrollbar-track
-.auctiontab-scroll.dark::-webkit-scrollbar-track {
-    background-color: #222;
+body.dark::-webkit-scrollbar-track,
+.submenuBg.dark::-webkit-scrollbar-track { 
+    background-color: #222; 
     -ms-overflow-style: none;
 }
+
 body.dark,
 .header-border.dark,
 .header_nav.dark,

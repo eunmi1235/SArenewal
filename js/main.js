@@ -14,6 +14,7 @@ $(function(){
     */ 
     const visualSwiper = new Swiper('.visual-swiper', {
         effect: 'fade',
+        initialSlide:0,  
         autoplay: {
             // speed : 2000,
             delay:5000,
@@ -23,7 +24,7 @@ $(function(){
             el: '.visual-pagaination',
             type:'fraction',
         },
-        breakpoints: {
+        breakpoints: { 
             1023:{
                 pagination: {
                     el: '.visual-pagaination',
@@ -57,18 +58,17 @@ $(function(){
     });
     
     
-    // 상단텍스트공지   
+    // 상단텍스트공지 
     const beltNoticeSwiper = new Swiper(".belt-swiper", {
-        initialSlide : 0,
+        initialSlide : 0, 
         autoplay: {
             delay: 4000,
-        },
-        allowTouchMove:false, /* 마우스 및 손가락 터치 시 슬라이드 이동 가능여부 */
-        touchMoveStopPropagation: true,   /* touchmove 중지 */
+        }, 
         direction:'vertical',
         loop: true,
     });   
-
+ 
+    
     /*Auction*/ 
     /*auction Tab 버튼*/ 
     $('.auctionTab-btn').click(function(){ 
@@ -128,17 +128,12 @@ $(function(){
         autoplay: {
             delay: 5000,
         },
-        initialSlide : 1,
+        initialSlide : 0,
         slidesPerView: 1,
-        spaceBetween: 10,
-        keyboard: {
-            enabled: true,
-        },
+        spaceBetween: 10, 
         pagination: {
             el: '.platform-pagination',
-            type: 'bullets',
-            clickable: true,
-            clickableClass:'.platform-pagination',
+            type: 'bullets', 
         },
         navigation: {
             nextEl: '.platformBtn-right',
@@ -146,17 +141,15 @@ $(function(){
         },
         loop: true,
         breakpoints : {
-            1023: {
-                CenteredSlidesBounds:true,
-                centeredSlides:true,
-                effect: 'fade',
+            1023: { 
                 autoplay: {
                     delay: 5000,
                 },
                 pagination: {
                     el: '.platform-pagination',
                     type: 'bullets',
-                    clickable: true,
+                    clickable: true, 
+                    clickableClass:'.platform-pagination',  
                 },
             },
         },
@@ -245,7 +238,7 @@ $(function(){
         $('.main-popupBg').fadeOut('1000', function(){
             $(this).removeClass('on');
             $('.main-popupwrap').removeClass('on');
-            $('body').css('overflow','visible');  
+            // $('body').css('overflow','visible');  
         });  
     });  
     
@@ -388,28 +381,22 @@ if (matchMedia("all and (min-width: 1024px)").matches) {
     $('.main-popupBg').addClass('on'); 
     $('.main-popupwrap').addClass('on'); 
     
-    /* 띠배너 beltbanner */
-    $('.header_beltbox.on').show(function () {
-        $('.main-contents').css('margin-top', '100px');
-        $('.m-gnbmenu').click(function(){
-            $('.submenuBg').css({'top':'0'});    
-        });
-    });
-    $('.beltclose-btn').click(function () {
-        $('.main-contents').css('margin-top', '56px');
-        $('.m-gnbmenu').click(function(){
-            $('.submenuBg').css({'top':'0'});
-        }); 
-    });
+    // if($('.main-popupBg').hasClass('on')){
+    //      $('body').css({'overflow':'hidden'});
+    // }
+    // $('main-popupBg').toggleClass('on'); 
 
-    if($('.main-popupBg').hasClass('on')){
-         $('body').css({'overflow':'hidden'});
-    }
-    $('main-popupBg').toggleClass('on');
-    
     /* platform */
     $('.platform-img.pc-ver').hide();   
-    $('.platform-img.m-ver').show(); 
+    $('.platform-img.m-ver').show();  
+
+    /* auction thumbnail hover 기능 */  
+    $('.auction-thumbbox').off("mouseenter"); 
+    $('.auction-thumb').off("mouseleave"); 
+    $('.auction-thumb').click(function(){
+        $(this).removeClass('on');
+        window.location.href == "./html/auction/offline_auction_before_ko.html"; 
+    }); 
 }
 
 
@@ -426,7 +413,7 @@ $(window).resize(function(){
         } else {
             $('.main-popupBg').removeClass('on');
             $('.main-contents').css({'margin-top': '102px'});
-        }  
+        }   
     } else {
         /* 쿠키가 없을 때 dim 있는 main 레이어팝업 */
         if ($('.main-popup-txt, .main-popup-img').hasClass('on')) {    
@@ -437,23 +424,9 @@ $(window).resize(function(){
             $('.main-popupBg').removeClass('on');
             $('.main-popupwrap').removeClass('on'); 
         } 
-
-        /* 띠배너 beltbanner */
-        $('.header_beltbox.on').show(function () {
-            $('.main-contents').css('margin-top', '100px');
-            $('.m-gnbmenu').click(function(){
-                $('.submenuBg').css({'top':'-43px'});
-            });
-        });
-        $('.beltclose-btn').click(function () {
-            $('.main-contents').css('margin-top', '56px');
-            $('.m-gnbmenu').click(function() {
-                $('.submenuBg').css({'top':'0'});
-            });
-        });
         
         /* visual hover none */
-        $('.visual-swiper > .swiper-wrapper, .swiper-button-next.slide-btnright, .swiper-button-prev.slide-btnleft').off('mouseenter');  
+        $('.visual-swiper > .swiper-wrapper, .swiper-button-next.slide-btnright, .swiper-button-prev.slide-btnleft').off('mouseenter'); 
     };  
     
     /* visual */
@@ -512,36 +485,5 @@ $(window).resize(function(){
         $('.playBtn').css({'display':'block'});
     }); 
      
-    const platFormSwiper = new Swiper('.platform-swiper', {
-        effect: 'fade',
-        autoplay: {
-            delay: 5000,
-        },
-        initialSlide : 1,
-        slidesPerView: 1, 
-        spaceBetween: 10,
-        keyboard: {
-            enabled: true,
-        },
-        pagination: {
-            el: '.platform-pagination',
-            clickable: true,
-            clickableClass:'.platform-pagination', 
-        },
-        navigation: {
-            nextEl: '.platformBtn-right',
-            prevEl: '.platformBtn-left',
-        },
-        loop: true,
-        breakpoints : {
-            1023: {
-                CenteredSlidesBounds:true,
-                centeredSlides:true,
-                effect: 'fade',
-                autoplay: {
-                    delay: 5000,
-                },
-            },
-        },
-    });
+    
 });     
