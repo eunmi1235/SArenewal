@@ -804,7 +804,7 @@ $(window).resize(function(){
         } else {   
             $(this).removeClass('on');    
             $('.main-contents').css('margin-top','56px'); 
-        };
+        };  
         
     
         /* 닫기 버튼 (gnb) */
