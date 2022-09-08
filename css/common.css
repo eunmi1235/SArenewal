@@ -132,23 +132,17 @@ body {
     letter-spacing: -0.4px; 
 }
 /*scroll style */
-body::-webkit-scrollbar,
-.submenuBg::-webkit-scrollbar {
+body::-webkit-scrollbar {
     /*display: none;*/
     width: 5px;
     height: 5px;
     -ms-overflow-style: none;
 }
-body::-webkit-scrollbar-thumb,
-.submenuBg::-webkit-scrollbar-thumb { 
+body::-webkit-scrollbar-thumb { 
     background-color: #bbb;  
     border-radius: 5px;
 }
-.submenuBg::-webkit-scrollbar-thumb {
-    background-color: rgba(225,225,225,0.5);
-}
-body::-webkit-scrollbar-track,
-.submenuBg::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     background-color: #f4f4f4;
 }
 blockquote, q {
@@ -357,6 +351,9 @@ img::selection {
 
 /* margin */
 /* 상단 공통 여백*/
+.topmargin0 {
+    margin-top: 0px; 
+}
 .topmargin10 {
     margin-top: 10px;
 }
@@ -1895,17 +1892,31 @@ body.dark,
     .submenuBg>div {
         padding: 0;
     }
-    .gnb_submenuBg {
-        flex-direction: column;
+    .dimlock {
+        overflow-y: hidden;
+        overflow-x: hidden;
         position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;  
+    }
+    .mver-gnbposition {
+        position: static; 
+        transform: none;
+        -webkit-transform: none;
+        -ms-transform: none; 
+    }
+    .gnb_submenuBg { 
+        position: fixed; 
         top: 0;
         bottom:0;
         /*right: -100%; */
         left: 0;
         right: 0;
         width: 100%;
-        height: 100vh; 
-        height: calc(var(--vh, 1vh)*100); 
+        /* height: calc(var(--vh, 1vh)*100);  */
         background-color: rgba(0,0,0,.5);
         backdrop-filter:blur(10px);
         z-index: 3;
@@ -1915,16 +1926,23 @@ body.dark,
         position: absolute;
         top: 0px;
         right: -100%;
-        left: auto;
-        height: 100vh; 
-        height: calc(var(--vh, 1vh)*100);
+        left: auto; 
+        bottom: 0;
+        
         max-width: 570px;
         padding: 0;
         overflow-y: auto;
-        z-index: 25;
+        overflow-x: hidden;
+        z-index: 100; 
+        pointer-events: auto;  
     }
     .submenuBg .wrap {
-        padding-top: 20px; 
+        padding-top: 20px;  
+        position: absolute;
+        top:0;
+        right: 0;
+        left: 0;
+        bottom: 0;
     }
     .gnb_blackBg { 
         display: none;
