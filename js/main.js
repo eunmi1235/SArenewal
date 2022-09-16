@@ -59,14 +59,14 @@ $(function(){
     
     
     // 상단텍스트공지 
-    const beltNoticeSwiper = new Swiper(".belt-swiper", {
-        initialSlide : 0, 
-        autoplay: {
-            delay: 4000,
-        }, 
-        direction:'vertical',
-        loop: true,
-    });   
+    // const beltNoticeSwiper = new Swiper(".belt-swiper", {
+    //     initialSlide : 0, 
+    //     autoplay: {
+    //         delay: 4000,
+    //     }, 
+    //     direction:'vertical',
+    //     loop: true,
+    // });   
  
     
     /*Auction*/ 
